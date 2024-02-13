@@ -1,0 +1,1066 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+* {
+  box-shadow: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+body .dashboard {
+  display: flex;
+  flex-direction: row wrap;
+  /* The ::-webkit-scrollbar-thumb pseudo-element targets the draggable handle */
+  /* The ::-webkit-scrollbar-track pseudo-element targets the background of the scrollbar */
+}
+body .dashboard .sidebar {
+  background-color: rgb(19, 0, 19);
+  border-top-right-radius: 16px;
+  padding: 1rem;
+  display: block;
+  flex: 1;
+  overflow-y: scroll;
+}
+body .dashboard .sidebar .logo-name {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 1rem;
+}
+body .dashboard .sidebar .logo-name img {
+  padding: 1rem;
+}
+body .dashboard .sidebar .logo-name .slide-back {
+  display: none;
+}
+body .dashboard .sidebar .sidebar-content ul {
+  padding: 0.1rem 0;
+}
+body .dashboard .sidebar .sidebar-content ul li {
+  margin-top: 1.5rem;
+  display: flex;
+}
+body .dashboard .sidebar .sidebar-content ul li svg {
+  padding: 0 0.5rem;
+}
+body .dashboard .sidebar .sidebar-content ul li a {
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+}
+body .dashboard .sidebar .sidebar-content ul li .dash-link {
+  color: rgb(255, 165, 0);
+}
+body .dashboard .sidebar .sidebar-content ul li:hover {
+  border-left: 2px solid rgb(255, 255, 255);
+}
+body .dashboard .sidebar .sidebar-content ul li:active {
+  color: yellow;
+}
+body .dashboard .sidebar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+body .dashboard .sidebar::-webkit-scrollbar-thumb {
+  background-color: #666; /* Color of the scrollbar handle */
+}
+body .dashboard .sidebar::-webkit-scrollbar-track {
+  background-color: #222; /* Color of the scrollbar track */
+}
+body .dashboard .main {
+  background-color: rgb(245, 245, 220);
+  padding: 1rem 1rem 0 1rem;
+  flex: 4;
+  transition: 0.5s ease-in;
+}
+body .dashboard .main .header {
+  display: grid;
+  grid-template-columns: 3% 32% 35% 30%;
+}
+body .dashboard .main .header .toggle-btn {
+  cursor: pointer;
+}
+body .dashboard .main .header .search-input input {
+  width: 330px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0px, 0px, 0px, 15px;
+  gap: 20px;
+  font-family: "Work Sans";
+  font-size: 18px;
+}
+body .dashboard .main .header .user-name {
+  font-family: "Work Sans";
+  color: rgb(128, 0, 128);
+  justify-content: right;
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  padding-top: 0.5rem;
+  font-weight: 600;
+}
+body .dashboard .main .header .alert-icon ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+}
+body .dashboard .main .header .alert-icon ul li {
+  padding: 10px 30px;
+}
+body .dashboard .main .login-name p {
+  font-family: Work Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .assignment {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding: 1rem 0 0 0;
+}
+body .dashboard .main .assignment .assignment-progress {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 1.5rem;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress h2, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress h2, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress h2, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress h2 {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0 0 0.5rem 0;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline {
+  padding-top: 0.25rem;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline label, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline label, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline label, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline label {
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  margin: 0.5rem 0;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .progress-bar, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .progress-bar, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .progress-bar, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .progress-bar {
+  height: 8px;
+  background-color: rgb(128, 0, 128);
+  text-align: center;
+  border-radius: 8px;
+  line-height: 30px;
+  color: white;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-10, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-10, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-10, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-10 {
+  width: 10%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-20, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-20, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-20, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-20 {
+  width: 20%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-30, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-30, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-30, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-30 {
+  width: 30%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-40, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-40, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-40, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-40 {
+  width: 40%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-50, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-50, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-50, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-50 {
+  width: 50%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-60, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-60, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-60, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-60 {
+  width: 60%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-70, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-70, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-70, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-70 {
+  width: 70%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-80, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-80, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-80, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-80 {
+  width: 80%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-90, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-90, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-90, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-90 {
+  width: 90%;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .time-limit, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .time-limit, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .time-limit, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .time-limit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .time-limit .date-to, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .time-limit .date-to, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .time-limit .date-to, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .time-limit .date-to {
+  text-align: right;
+}
+body .dashboard .main .assignment .assignment-progress .progress-status .pt-2 {
+  padding-top: 1rem;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history h2 {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1rem 0;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user {
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .dp {
+  padding: 0.35rem 0;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .dp img {
+  width: 24.46px;
+  height: 24px;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .username p {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .time {
+  text-align: center;
+}
+body .dashboard .main .assignment .assignment-progress .submission-history .pt-1 {
+  padding-top: 0.5rem;
+}
+body .dashboard .main .assignment .course-drafts {
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 0 0 1rem;
+  padding: 1.5rem;
+}
+body .dashboard .main .assignment .course-drafts .draft-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .dashboard .main .assignment .course-drafts .draft-search .draft h2 {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0.5rem 0;
+}
+body .dashboard .main .assignment .course-drafts .draft-search .search-container {
+  position: relative;
+  width: 70%;
+}
+body .dashboard .main .assignment .course-drafts .draft-search .search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 1rem 0;
+}
+body .dashboard .main .assignment .course-drafts .draft-search .search-container .search-input {
+  width: 100%;
+  line-height: 2rem;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+body .dashboard .main .assignment .course-drafts .draft-search .search-container input {
+  padding: 0 2rem;
+}
+body .dashboard .main .assignment .course-drafts .draft-search .search-container ::placeholder {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+body .dashboard .main .assignment .course-drafts .course-dated {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.75rem 0;
+}
+body .dashboard .main .assignment .course-drafts .course-dated .course-title {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .assignment .course-drafts .course-dated .course-datetime {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+body .dashboard .main .assignment .course-drafts .pt-1 {
+  padding-top: 1.5rem;
+}
+body .dashboard .main .published-assignment {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 1rem;
+}
+body .dashboard .main .published-assignment .assignment-type {
+  display: grid;
+  background-color: rgb(255, 255, 255);
+  grid-template-columns: 1fr;
+}
+body .dashboard .main .published-assignment .assignment-type .pdf-file {
+  display: grid;
+  padding: 4rem 0;
+}
+body .dashboard .main .published-assignment .assignment-type .pdf-file svg {
+  justify-self: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  color: rgb(19, 0, 19);
+  padding: 0.35rem 0;
+}
+body .dashboard .main .published-assignment .assignment-type .assignment-title {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(19, 0, 19);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .dashboard .main .published-assignment .assignment-type .assignment-title b {
+  padding: 0.95rem;
+}
+body .dashboard .main .published-assignment .assignment-type .assignment-title a {
+  padding: 0.51rem;
+  text-align: right;
+}
+body .dashboard .main .published-assignment .assignment-details {
+  display: grid;
+  padding: 1rem;
+}
+body .dashboard .main .published-assignment .assignment-details p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .published-assignment .assignment-details p b {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .students-data .student-filter {
+  padding: 1rem 0 0 0;
+}
+body .dashboard .main .students-data .student-filter select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid rgb(19, 0, 19);
+  justify-self: space-between;
+  line-height: 1rem;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+body .dashboard .main .students-data .student-list {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  margin: 1rem 0;
+}
+body .dashboard .main .students-data .student-list .data-head {
+  display: grid;
+  grid-template-columns: 35% 25% 10% 30%;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  padding: 1rem 0.75rem 1em 1rem;
+}
+body .dashboard .main .students-data .student-list .data-head .regno, body .dashboard .main .students-data .student-list .data-head .level, body .dashboard .main .students-data .student-list .data-head .enrolled {
+  text-align: center;
+}
+body .dashboard .main .students-data .student-list .data-list {
+  display: grid;
+  grid-template-columns: 35% 25% 10% 30%;
+  text-align: center;
+}
+body .dashboard .main .students-data .student-list .data-list .user-details {
+  display: flex;
+  padding: 1rem 0.75rem;
+}
+body .dashboard .main .students-data .student-list .data-list .user-details img {
+  width: 40px;
+  height: 40px;
+}
+body .dashboard .main .students-data .student-list .data-list .user-details p {
+  text-align: left;
+  padding: 0.55rem 0 0 0.25rem;
+}
+body .dashboard .main .students-data .student-list .data-list .reg-number, body .dashboard .main .students-data .student-list .data-list .current-level, body .dashboard .main .students-data .student-list .data-list .enrolled-courses {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  padding: 1.5rem 0.75rem;
+}
+body .dashboard .main .course-and-assignment .course-list {
+  display: flex;
+  padding: 1rem 0 0 0;
+}
+body .dashboard .main .course-and-assignment .course-list .course-radio {
+  display: flex;
+  flex-direction: row wrap;
+  padding: 0 1rem;
+}
+body .dashboard .main .course-and-assignment .course-list .course-radio input {
+  padding: 0 0.25rem;
+}
+body .dashboard .main .course-and-assignment .course-assignment {
+  display: grid;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment {
+  background: rgb(255, 255, 255);
+  margin: 2rem 0 1rem 0;
+  padding: 1rem;
+  border-radius: 30px;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment h2 {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-title h3 {
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1rem 0 0 0;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  margin: 0.5rem 0;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .progress-bar {
+  height: 8px;
+  background-color: rgb(128, 0, 128);
+  text-align: center;
+  border-radius: 8px;
+  line-height: 30px;
+  color: white;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-10 {
+  width: 10%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-20 {
+  width: 20%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-30 {
+  width: 30%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-40 {
+  width: 40%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-50 {
+  width: 50%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-60 {
+  width: 60%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-70 {
+  width: 70%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-80 {
+  width: 80%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-90 {
+  width: 90%;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .course-edit {
+  text-align: right;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .course-edit svg {
+  cursor: pointer;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date .date-from, body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date .date-to {
+  font-family: "Work Sans";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+}
+body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date .date-to {
+  text-align: right;
+}
+body .dashboard .main .course-and-assignment .course-assignment .publish-assignment {
+  background-color: #fff;
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 1rem;
+}
+body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form textarea {
+  border-radius: 30px;
+  height: 5rem;
+}
+body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control {
+  display: grid;
+  grid-template-columns: 65% 10% 25%;
+  padding: 1rem;
+}
+body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control button {
+  width: 20%;
+  background: rgb(128, 0, 128);
+  float: left;
+  justify-self: left;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0em;
+  color: rgb(255, 255, 255);
+  border: rgb(128, 0, 128);
+  border-radius: 8px;
+}
+body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control svg {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control input {
+  border: 1px solid rgb(212, 88, 0);
+  padding: 1rem;
+  border-radius: 8px;
+}
+body .dashboard .main footer {
+  display: grid;
+  padding-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  font-size: 18px;
+}
+body .dashboard .main footer .site-version {
+  justify-self: right;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  body .dashboard {
+    background-color: rgb(245, 245, 220);
+    display: flex;
+    flex-direction: row wrap;
+    overflow: auto;
+    /* The ::-webkit-scrollbar-thumb pseudo-element targets the draggable handle */
+    /* The ::-webkit-scrollbar-track pseudo-element targets the background of the scrollbar */
+  }
+  body .dashboard .sidebar {
+    background-color: rgb(19, 0, 19);
+    border-top-right-radius: 16px;
+    padding: 1rem;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    max-width: 60%;
+    overflow: auto;
+    flex: 1;
+    overflow-y: auto;
+  }
+  body .dashboard .sidebar .logo-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1rem;
+  }
+  body .dashboard .sidebar .logo-name img {
+    padding: 1rem;
+  }
+  body .dashboard .sidebar .logo-name .slide-back {
+    float: right;
+    justify-self: right;
+    margin: 1rem 0;
+    cursor: pointer;
+    display: block;
+    background-color: rgb(255, 165, 0);
+    border-radius: 0.21rem;
+    padding: 0.1rem;
+  }
+  body .dashboard .sidebar .sidebar-content ul {
+    padding: 1rem 0;
+  }
+  body .dashboard .sidebar .sidebar-content ul li {
+    margin-top: 1rem;
+    display: flex;
+  }
+  body .dashboard .sidebar .sidebar-content ul li svg {
+    padding: 0 0.5rem;
+  }
+  body .dashboard .sidebar .sidebar-content ul li a {
+    text-decoration: none;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 0 0.5rem;
+    margin-top: 0.15rem;
+  }
+  body .dashboard .sidebar .sidebar-content ul li .dash-link {
+    color: rgb(255, 165, 0);
+  }
+  body .dashboard .sidebar .sidebar-content ul li:hover {
+    border-left: 2px solid rgb(255, 255, 255);
+  }
+  body .dashboard .sidebar .sidebar-content ul li:active {
+    color: yellow;
+  }
+  body .dashboard .sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  body .dashboard .sidebar::-webkit-scrollbar-thumb {
+    background-color: #666; /* Color of the scrollbar handle */
+  }
+  body .dashboard .sidebar::-webkit-scrollbar-track {
+    background-color: #222; /* Color of the scrollbar track */
+  }
+  body .dashboard .main {
+    background-color: rgb(245, 245, 220);
+    transition: transform 0.1s ease;
+    width: 100%;
+    flex: 4;
+  }
+  body .dashboard .main .header {
+    display: flex;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .header .toggle-btn {
+    flex: 0.3;
+    padding: 0;
+    cursor: pointer;
+  }
+  body .dashboard .main .header .toggle-btn svg {
+    cursor: pointer;
+  }
+  body .dashboard .main .header .search-input {
+    flex: 1;
+  }
+  body .dashboard .main .header .search-input input {
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    padding: 0px, 0px, 0px, 15px;
+    gap: 20px;
+    font-family: "Work Sans";
+    font-size: 18px;
+  }
+  body .dashboard .main .header .user-name {
+    font-family: "Work Sans";
+    color: rgb(128, 0, 128);
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    float: center;
+    flex: 2;
+  }
+  body .dashboard .main .header .alert-icon {
+    justify-self: center;
+  }
+  body .dashboard .main .header .alert-icon ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+  }
+  body .dashboard .main .header .alert-icon ul li {
+    padding: 5px 10px;
+  }
+  body .dashboard .main .login-name {
+    padding: 0 0.51rem;
+  }
+  body .dashboard .main .login-name p {
+    font-family: Work Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .assignment {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem 0 0 0;
+  }
+  body .dashboard .main .assignment .assignment-progress {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 1.5rem;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress h2, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress h2, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress h2, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress h2 {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0 0 0.5rem 0;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline {
+    padding-top: 0.25rem;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline label, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline label, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline label, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline label {
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin: 0.5rem 0;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .progress-bar, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .progress-bar, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .progress-bar, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .progress-bar {
+    height: 8px;
+    background-color: rgb(128, 0, 128);
+    text-align: center;
+    border-radius: 8px;
+    line-height: 30px;
+    color: white;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-10, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-10, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-10, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-10 {
+    width: 10%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-20, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-20, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-20, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-20 {
+    width: 20%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-30, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-30, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-30, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-30 {
+    width: 30%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-40, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-40, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-40, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-40 {
+    width: 40%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-50, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-50, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-50, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-50 {
+    width: 50%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-60, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-60, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-60, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-60 {
+    width: 60%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-70, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-70, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-70, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-70 {
+    width: 70%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-80, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-80, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-80, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-80 {
+    width: 80%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .timeline .progress-container .pb-90, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .timeline .progress-container .pb-90, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .timeline .progress-container .pb-90, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .timeline .progress-container .pb-90 {
+    width: 90%;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .time-limit, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .time-limit, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .time-limit, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .time-limit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .timeline-progress .time-limit .date-to, body .dashboard .main .assignment .assignment-progress .progress-status .mct-progress .time-limit .date-to, body .dashboard .main .assignment .assignment-progress .progress-status .machine-progress .time-limit .date-to, body .dashboard .main .assignment .assignment-progress .progress-status .classification-progress .time-limit .date-to {
+    text-align: right;
+  }
+  body .dashboard .main .assignment .assignment-progress .progress-status .pt-2 {
+    padding-top: 1rem;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history h2 {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user {
+    display: grid;
+    grid-template-columns: 7% 70% 23%;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .dp {
+    padding: 0.35rem 0;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .dp img {
+    width: 24.46px;
+    height: 24px;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .username p {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history .submitted-user .time {
+    text-align: center;
+  }
+  body .dashboard .main .assignment .assignment-progress .submission-history .pt-1 {
+    padding-top: 0.5rem;
+  }
+  body .dashboard .main .assignment .course-drafts {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 0 1rem 1rem;
+    padding: 1.5rem;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search .draft h2 {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search .search-container {
+    position: relative;
+    width: 70%;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search .search-container .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search .search-container .search-input {
+    width: 100%;
+    line-height: 2rem;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search .search-container input {
+    padding: 0 2rem;
+  }
+  body .dashboard .main .assignment .course-drafts .draft-search .search-container ::placeholder {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+  }
+  body .dashboard .main .assignment .course-drafts .course-dated {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.75rem 0;
+  }
+  body .dashboard .main .assignment .course-drafts .course-dated .course-title {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .assignment .course-drafts .course-dated .course-datetime {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+  body .dashboard .main .assignment .course-drafts .pt-1 {
+    padding-top: 1.5rem;
+  }
+  body .dashboard .main .published-assignment {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 1rem;
+  }
+  body .dashboard .main .published-assignment .assignment-type {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr;
+    height: 15rem;
+  }
+  body .dashboard .main .published-assignment .assignment-type .pdf-file {
+    display: grid;
+    padding: 3rem 0;
+  }
+  body .dashboard .main .published-assignment .assignment-type .pdf-file svg {
+    justify-self: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: rgb(19, 0, 19);
+    padding: 0.15rem 0;
+  }
+  body .dashboard .main .published-assignment .assignment-type .assignment-title {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 0, 19);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 3rem 0;
+    height: 3rem;
+  }
+  body .dashboard .main .published-assignment .assignment-type .assignment-title b {
+    padding: 1rem 0.25rem;
+    margin: 0;
+  }
+  body .dashboard .main .published-assignment .assignment-type .assignment-title a {
+    padding: 0.8rem 0.25rem;
+    margin: 0;
+  }
+  body .dashboard .main .published-assignment .assignment-details {
+    display: grid;
+    padding: 0.5rem 0.5rem;
+  }
+  body .dashboard .main .published-assignment .assignment-details p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .published-assignment .assignment-details p b {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .students-data .student-filter select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid rgb(19, 0, 19);
+    justify-self: space-between;
+    line-height: 1rem;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+  }
+  body .dashboard .main .students-data .student-list {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    margin: 1rem 0;
+  }
+  body .dashboard .main .students-data .student-list .data-head {
+    display: grid;
+    grid-template-columns: 35% 25% 10% 30%;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding: 1rem 0.75rem 1em 1rem;
+    font-size: 13px;
+  }
+  body .dashboard .main .students-data .student-list .data-head .regno, body .dashboard .main .students-data .student-list .data-head .level, body .dashboard .main .students-data .student-list .data-head .enrolled {
+    text-align: center;
+  }
+  body .dashboard .main .students-data .student-list .data-list {
+    display: grid;
+    grid-template-columns: 35% 25% 10% 30%;
+    text-align: center;
+    font-size: 16px;
+  }
+  body .dashboard .main .students-data .student-list .data-list .user-details {
+    display: flex;
+    padding: 0.75rem;
+  }
+  body .dashboard .main .students-data .student-list .data-list .user-details img {
+    width: 40px;
+    height: 40px;
+  }
+  body .dashboard .main .students-data .student-list .data-list .user-details p {
+    text-align: left;
+    padding: 0.25rem 0 0 0.25rem;
+  }
+  body .dashboard .main .students-data .student-list .data-list .reg-number, body .dashboard .main .students-data .student-list .data-list .current-level, body .dashboard .main .students-data .student-list .data-list .enrolled-courses {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    padding: 1.5rem 0.75rem;
+  }
+  body .dashboard .main .course-assignment {
+    background-color: rgb(255, 255, 255);
+  }
+  body .dashboard .main footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(19, 0, 19);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 1rem 0;
+  }
+  body .dashboard .main footer .copyright {
+    justify-self: center;
+  }
+  body .dashboard .main footer .site-version {
+    text-align: center;
+    justify-self: center;
+    padding: 0.5rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */
