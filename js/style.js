@@ -65,3 +65,17 @@ $(document).ready(function() {
         $(this).parent().addClass("active");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+    
+    radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener('click', function () {
+            radioButtons.forEach(function (rb) {
+                if (rb !== radioButton) {
+                    rb.checked = false;
+                }
+            });
+        });
+    });
+});

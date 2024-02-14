@@ -432,6 +432,80 @@ body .dashboard .main .students-data .student-list .data-list .reg-number, body 
   letter-spacing: 0em;
   padding: 1.5rem 0.75rem;
 }
+body .dashboard .main .submission-grading .course-list {
+  display: flex;
+  padding: 0.25rem 0 0 0;
+}
+body .dashboard .main .submission-grading .course-list .course-radio {
+  display: flex;
+  flex-direction: row wrap;
+  padding: 0 2rem;
+}
+body .dashboard .main .submission-grading .course-list .course-radio input {
+  margin: 0 0.25rem;
+  color: rgb(128, 0, 128);
+  border: 1px solid rgb(128, 0, 128);
+}
+body .dashboard .main .submission-grading .course-datalist {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  margin: 1rem 0;
+}
+body .dashboard .main .submission-grading .course-datalist .datalist-headings {
+  display: grid;
+  grid-template-columns: 35% 25% 10% 30%;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  padding: 1rem 0.75rem 1em 1rem;
+}
+body .dashboard .main .submission-grading .course-datalist .datalist-headings .regno, body .dashboard .main .submission-grading .course-datalist .datalist-headings .level, body .dashboard .main .submission-grading .course-datalist .datalist-headings .enrolled {
+  text-align: center;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list {
+  display: grid;
+  grid-template-columns: 35% 25% 10% 30%;
+  text-align: center;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .user-details {
+  display: flex;
+  padding: 1rem 0.75rem;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .user-details img {
+  width: 40px;
+  height: 40px;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .user-details p {
+  text-align: left;
+  padding: 0.55rem 0 0 0.25rem;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .current-status {
+  padding: 2rem 0;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .current-status .btn-graded {
+  background-color: rgb(0, 204, 57);
+  margin: 1rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 204, 57);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  text-decoration: none;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .current-status .btn-pending {
+  background-color: rgb(51, 51, 51);
+  margin: 1rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  text-decoration: none;
+}
+body .dashboard .main .submission-grading .course-datalist .data-list .date, body .dashboard .main .submission-grading .course-datalist .data-list .enrolled-courses, body .dashboard .main .submission-grading .course-datalist .data-list .current-status {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  padding: 1.5rem 0.75rem;
+}
 body .dashboard .main .course-and-assignment .course-list {
   display: flex;
   padding: 1rem 0 0 0;
@@ -546,7 +620,7 @@ body .dashboard .main .course-and-assignment .course-assignment .publish-assignm
 body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control {
   display: grid;
   grid-template-columns: 65% 10% 25%;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control button {
   width: 20%;
@@ -716,9 +790,6 @@ body .dashboard .main footer .site-version {
   }
   body .dashboard .main .header .alert-icon ul li {
     padding: 5px 10px;
-  }
-  body .dashboard .main .login-name {
-    padding: 0 0.51rem;
   }
   body .dashboard .main .login-name p {
     font-family: Work Sans;
@@ -1044,8 +1115,250 @@ body .dashboard .main footer .site-version {
     letter-spacing: 0em;
     padding: 1.5rem 0.75rem;
   }
-  body .dashboard .main .course-assignment {
+  body .dashboard .main .course-and-assignment {
+    padding: 0 0 1rem 0;
+    max-width: 99.6%;
+  }
+  body .dashboard .main .course-and-assignment .course-list {
+    display: flex;
+    padding: 1rem 0 0 0;
+  }
+  body .dashboard .main .course-and-assignment .course-list .course-radio {
+    display: flex;
+    flex-direction: row wrap;
+    padding: 0 0.75rem;
+  }
+  body .dashboard .main .course-and-assignment .course-list .course-radio input {
+    padding: 0 0.25rem;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment {
+    background: rgb(255, 255, 255);
+    margin: 2rem 0 1rem 0;
+    padding: 1rem;
+    border-radius: 30px;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment h2 {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-title h3 {
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 1rem 0 0 0;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action {
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin: 0.5rem 0;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .progress-bar {
+    height: 8px;
+    background-color: rgb(128, 0, 128);
+    text-align: center;
+    border-radius: 8px;
+    line-height: 30px;
+    color: white;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-10 {
+    width: 10%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-20 {
+    width: 20%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-30 {
+    width: 30%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-40 {
+    width: 40%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-50 {
+    width: 50%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-60 {
+    width: 60%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-70 {
+    width: 70%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-80 {
+    width: 80%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .progress-container .pb-90 {
+    width: 90%;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .course-edit {
+    text-align: right;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .course-action .course-edit svg {
+    cursor: pointer;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date .date-from, body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date .date-to {
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .active-assignment .course-status .submission-date .date-to {
+    text-align: right;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment {
+    background-color: #fff;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 1rem;
+    padding: 0 0 1rem 0;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form {
+    padding: 0;
+    margin: 0;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form textarea {
+    border-radius: 30px;
+    height: 5rem;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control {
+    display: grid;
+    grid-template-columns: 30% 20% 40%;
+    padding: 0 1rem 1rem 1rem;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control button {
+    width: 100%;
+    background: rgb(128, 0, 128);
+    float: left;
+    justify-self: left;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 0em;
+    color: rgb(255, 255, 255);
+    border: rgb(128, 0, 128);
+    border-radius: 8px;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control svg {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 0 1rem;
+  }
+  body .dashboard .main .course-and-assignment .course-assignment .publish-assignment form .form-control input {
+    border: 1px solid rgb(212, 88, 0);
+    padding: 1rem;
+    border-radius: 8px;
+    float: right;
+    justify-self: left;
+    width: 100%;
+  }
+  body .dashboard .main .submission-grading {
+    padding: 0;
+    margin: 0;
+  }
+  body .dashboard .main .submission-grading .course-list {
+    display: flex;
+    padding: 0;
+  }
+  body .dashboard .main .submission-grading .course-list .course-radio {
+    display: flex;
+    flex-direction: row wrap;
+    padding: 0.5rem 0.25rem;
+  }
+  body .dashboard .main .submission-grading .course-list .course-radio input {
+    margin: 0 0.1rem;
+    color: rgb(128, 0, 128);
+    border: 1px solid rgb(128, 0, 128);
+  }
+  body .dashboard .main .submission-grading .course-datalist {
     background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  body .dashboard .main .submission-grading .course-datalist .datalist-headings {
+    display: grid;
+    grid-template-columns: 33% 25% 10% 32%;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    padding: 1rem 0.75rem 1em 1rem;
+  }
+  body .dashboard .main .submission-grading .course-datalist .datalist-headings .level {
+    text-align: left;
+    font-size: 18px;
+  }
+  body .dashboard .main .submission-grading .course-datalist .datalist-headings .enrolled {
+    text-align: center;
+    padding: 0 2.5rem;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list {
+    display: grid;
+    grid-template-columns: 35% 25% 10% 30%;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .user-details {
+    display: flex;
+    flex-direction: row wrap;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .user-details img {
+    width: 27px;
+    height: 27px;
+    padding: 0.75rem 0;
+    margin: 0;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .user-details p {
+    text-align: left;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .current-status {
+    padding: 2rem 0;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .current-status .btn-graded {
+    background-color: rgb(0, 204, 57);
+    margin: 1rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgb(0, 204, 57);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .current-status .btn-pending {
+    background-color: rgb(51, 51, 51);
+    margin: 1rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  body .dashboard .main .submission-grading .course-datalist .data-list .date, body .dashboard .main .submission-grading .course-datalist .data-list .enrolled-courses, body .dashboard .main .submission-grading .course-datalist .data-list .current-status {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    padding: 1.5rem 0.75rem;
   }
   body .dashboard .main footer {
     display: grid;

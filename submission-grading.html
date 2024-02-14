@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Educator Dashboard || Dashboard Students Page</title>
+    <title>Educator Dashboard || Dashboard Submissions and Grading</title>
 </head>
 <body class="light-theme">
 <div class="dashboard">
@@ -107,37 +107,35 @@
         <div class="login-name">
             <P>Hello Educator. Welcome to your desk.</P>
         </div>
-        <div class="students-data">
-            <div class="student-filter">
-                <select class="form-control" name="hr_rank" >
-                    <option value=""  disabled="disabled"  selected="selected" required>&rarr; All </option>
-                    <option value="100L">&rarr; 100L</option>
-                    <option value="200L">&rarr; 200L</option>
-                    <option value="300L">&rarr; 300L</option>
-                    <option value="400L">&rarr; 400L</option>
-                    <option value="500L">&rarr; 500L</option>
-                </select>
+        <div class="submission-grading">
+            <div class="course-list">
+                <label class="course-radio"><input type="radio" name="all" id="all">All</label>
+                <label class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</label>
+                <label class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</label>
+                <label class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</label>
+                <label class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</label>
             </div>
-            <div class="student-list">
-                <div class="data-head">
-                    <h3>Name</h3>
-                    <h3 class="regno">REG. NO.</h3>
-                    <h3 class="level">LEVEL</h3>
-                    <h3 class="enrolled">ENROLLED COURSES</h3>
+            
+            <div class="course-datalist">
+                <div class="datalist-headings">
+                    <h3>NAME</h3>
+                    <h3 class="regno">DATE</h3>
+                    <h3 class="level">COURSE</h3>
+                    <h3 class="enrolled">GRADING STATUS</h3>
                 </div>
                 <div class="data-list">
                     <div class="user-details">
                         <img src="img/Ellipse 301.png" alt="">
                         <p>Uchechukwu Kindness B.</p>
                     </div>
-                    <div class="reg-number">
-                        2018/EN/7273
-                    </div>
-                    <div class="current-level">
-                        500L
+                    <div class="date">
+                        24/01/2024
                     </div>
                     <div class="enrolled-courses">
                         MCT 202
+                    </div>
+                    <div class="current-status">
+                        <a class="btn-graded" href="graded.html">Graded</a>
                     </div>
                 </div>
                 <div class="data-list pt-1">
@@ -145,14 +143,15 @@
                         <img src="img/Ellipse 301.png" alt="">
                         <p>Okoro Jennifer</p>
                     </div>
-                    <div class="reg-number">
-                        2018/EN/2132
+                    <div class="date">
+                        24/01/2024
                     </div>
-                    <div class="current-level">
-                        100L
-                    </div>
+
                     <div class="enrolled-courses">
                         MCT 305
+                    </div>
+                    <div class="current-status">
+                        <a class="btn-graded" href="graded.html">Graded</a>
                     </div>
                 </div>
                 <div class="data-list pt-1">
@@ -160,14 +159,14 @@
                         <img src="img/Ellipse 301.png" alt="">
                         <p>John Chiadikam</p>
                     </div>
-                    <div class="reg-number">
-                        2018/EN/1241
-                    </div>
-                    <div class="current-level">
-                        300L
+                    <div class="date">
+                        24/01/2024
                     </div>
                     <div class="enrolled-courses">
                         MCT 302
+                    </div>
+                    <div class="current-status">
+                        <a class="btn-graded" href="graded.html">Graded</a>
                     </div>
                 </div>
                 <div class="data-list pt-1">
@@ -175,14 +174,14 @@
                         <img src="img/Ellipse 301.png" alt="">
                         <p>Chukwujekwu Okoh</p>
                     </div>
-                    <div class="reg-number">
-                        2018/EN/7273
-                    </div>
-                    <div class="current-level">
-                        500L
+                    <div class="date">
+                        24/01/2024
                     </div>
                     <div class="enrolled-courses">
                         MCT 202
+                    </div>
+                    <div class="current-status">
+                        <a class="btn-pending" href="pending.html">Pending</a>
                     </div>
                 </div>
                 <div class="data-list pt-4">
@@ -190,14 +189,14 @@
                         <img src="img/Ellipse 301.png" alt="">
                         <p>Uchechukwu Kindness B.</p>
                     </div>
-                    <div class="reg-number">
-                        2018/EN/7273
-                    </div>
-                    <div class="current-level">
-                        500L
+                    <div class="date">
+                        24/01/2024
                     </div>
                     <div class="enrolled-courses">
                         MCT 202
+                    </div>
+                    <div class="current-status">
+                        <a class="btn-pending" href="pending.html">Pending</a>
                     </div>
                 </div>
                 <div class="data-list pt-5">
@@ -205,14 +204,14 @@
                         <img src="img/Ellipse 301.png" alt="">
                         <p>Uchechukwu Kindness B.</p>
                     </div>
-                    <div class="reg-number">
-                        2018/EN/7273
-                    </div>
-                    <div class="current-level">
-                        500L
+                    <div class="date">
+                        24/01/2024
                     </div>
                     <div class="enrolled-courses">
                         MCT 202
+                    </div>
+                    <div class="current-status">
+                        <a class="btn-pending" href="pending.html">Pending</a>
                     </div>
                 </div>
             </div>
@@ -228,5 +227,21 @@
     </section>
 </div>
 <script src="js/style.js"></script>
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+    var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+    
+    radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener('click', function () {
+            radioButtons.forEach(function (rb) {
+                if (rb !== radioButton) {
+                    rb.checked = false;
+                }
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>

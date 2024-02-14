@@ -450,6 +450,82 @@ body{
                 }
             }
         }
+        .submission-grading{
+            .course-list{
+                display: flex;
+                padding: 0.25rem 0 0 0;
+                .course-radio{
+                    display: flex;
+                    flex-direction: row wrap;
+                    padding: 0 2rem;
+                    input{
+                        margin: 0 0.25rem;
+                        color: rgba(128, 0, 128, 1);
+                        border: 1px solid rgba(128, 0, 128, 1);
+                    }
+                }
+            }
+            .course-datalist{
+                background-color: $white-color;
+                border-radius: 30px;
+                margin: 1rem 0;
+                .datalist-headings{
+                    display: grid;
+                    grid-template-columns: 35% 25% 10% 30%;
+                    border-bottom: 1px solid rgba(51, 51, 51, 1);
+                    padding: 1rem 0.75rem 1em 1rem;
+                    .regno, .level, .enrolled{
+                        text-align: center;
+                    }
+                }
+                .data-list{
+                    display: grid;
+                    grid-template-columns: 35% 25% 10% 30%;
+                    text-align: center;
+                    .user-details{
+                        display: flex;
+                        padding: 1rem 0.75rem;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        p{
+                            text-align: left;
+                            padding: 0.55rem 0 0 0.25rem;
+                        }
+                    }
+                    .current-status{
+                        padding: 2rem 0;
+                        .btn-graded{
+                            background-color: rgba(0, 204, 57, 1);
+                            margin: 1rem 0.75rem;
+                            border-radius: 8px;
+                            border: 1px solid rgba(0, 204, 57, 1);
+                            color: $white-color;
+                            padding: 0.5rem;
+                            text-decoration: none;
+                        }
+                        .btn-pending{
+                            background-color: rgba(51, 51, 51, 1);
+                            margin: 1rem 0.75rem;
+                            border-radius: 8px;
+                            border: 1px solid rgba(51, 51, 51, 1);
+                            color: $white-color;
+                            padding: 0.5rem;
+                            text-decoration: none;
+                        }
+                    }
+                    .date, .enrolled-courses, .current-status{
+                        font-family: Work Sans;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 19px;
+                        letter-spacing: 0em;
+                        padding: 1.5rem 0.75rem;
+                    }
+                }
+            }
+        }
         .course-and-assignment{
             .course-list{
                 display: flex;
@@ -569,7 +645,7 @@ body{
                         .form-control{
                             display: grid;
                             grid-template-columns: 65% 10% 25%;
-                            padding: 1rem;
+                            padding: 0 1rem 1rem 1rem;
                             button{
                                 width: 20%;
                                 background: rgba(128, 0, 128, 1);
@@ -751,7 +827,6 @@ body{
                 }
             }
             .login-name{
-              padding: 0 0.51rem;
                 p{
                     font-family: Work Sans;
                     font-size: 22px;
@@ -1088,8 +1163,261 @@ body{
                     }
                 }
             }
-            .course-assignment{
-                background-color: $white-color;
+            .course-and-assignment{
+                padding: 0 0 1rem 0;
+                max-width: 99.6%;
+                .course-list{
+                    display: flex;
+                    padding: 1rem 0 0 0;
+                    .course-radio{
+                        display: flex;
+                        flex-direction: row wrap;
+                        padding: 0 0.75rem;
+                        input{
+                            padding: 0 0.25rem;
+                        }
+                    }
+                }
+                .course-assignment{
+                    display: grid;
+                    grid-template-columns: 100%;
+                    padding: 0;
+                    margin: 0;
+                    .active-assignment{
+                        background: rgba(255, 255, 255, 1);
+                        margin: 2rem 0 1rem 0;
+                        padding: 1rem;
+                        border-radius: 30px;
+                        h2{
+                            font-family: $font;
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 19px;
+                            letter-spacing: 0em;
+                            text-align: left;
+    
+                        }
+                        .course-status{
+                            .course-title{
+                                h3{
+                                    font-family: $font;
+                                    font-size: 12px;
+                                    font-weight: 700;
+                                    line-height: 14px;
+                                    letter-spacing: 0em;
+                                    text-align: left;
+                                    padding: 1rem 0 0 0;
+                                }
+                            }
+                            .course-action{
+                                display: grid;
+                                grid-template-columns: 80% 20%;
+                                .progress-container {
+                                    width: 100%;
+                                    background-color: #f3f3f3;
+                                    margin: 0.5rem 0;
+                                    .progress-bar {
+                                        height: 8px;
+                                        background-color: rgba(128, 0, 128, 1);
+                                        text-align: center;
+                                        border-radius: 8px;
+                                        line-height: 30px;
+                                        color: white;
+                                    }
+                                    .pb-10{
+                                        width: 10%;
+                                    }
+                                    .pb-20{
+                                        width: 20%;
+                                    }
+                                    .pb-30{
+                                        width: 30%;
+                                    }
+                                    .pb-40{
+                                        width: 40%;
+                                    }
+                                    .pb-50{
+                                        width: 50%;
+                                    }
+                                    .pb-60{
+                                        width: 60%;
+                                    }
+                                    .pb-70{
+                                        width: 70%;
+                                    }
+                                    .pb-80{
+                                        width: 80%;
+                                    }
+                                    .pb-90{
+                                        width: 90%;
+                                    }
+                                }
+                                .course-edit{
+                                    text-align: right;
+                                    svg{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            .submission-date{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                .date-from, .date-to{
+                                    font-family: $font;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    line-height: 14px;
+                                    letter-spacing: 0em;
+                                }
+                                .date-to{
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
+                    .publish-assignment{
+                        background-color: #fff;
+                        border: 1px solid rgba(51, 51, 51, 1);
+                        border-radius: 1rem;
+                        padding: 0 0 1rem 0;
+                        form{
+                            padding: 0;
+                            margin: 0;
+                            textarea{
+                                border-radius: 30px;
+                                height: 5rem;
+                            }
+                            .form-control{
+                                display: grid;
+                                grid-template-columns: 30% 20% 40%;
+                                padding: 0 1rem 1rem 1rem;
+                                button{
+                                    width: 100%;
+                                    background: rgba(128, 0, 128, 1);
+                                    float: left;
+                                    justify-self: left;
+                                    text-align: center;
+                                    font-family: $font;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    line-height: 2.5rem;
+                                    letter-spacing: 0em;
+                                    color: rgba(255, 255, 255, 1);
+                                    border: rgba(128, 0, 128, 1);
+                                    border-radius: 8px;
+                                }
+                                svg{
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 4px;
+                                    padding: 0 1rem;
+                                }
+                                input{
+                                    border: 1px solid rgba(212, 88, 0, 1);
+                                    padding: 1rem;
+                                    border-radius: 8px;
+                                    float: right;
+                                    justify-self: left;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .submission-grading{
+                padding: 0;
+                margin: 0;
+                .course-list{
+                    display: flex;
+                    padding: 0;
+                    .course-radio{
+                        display: flex;
+                        flex-direction: row wrap;
+                        padding: 0.50rem 0.25rem;
+                        input{
+                            margin: 0 0.10rem;
+                            color: rgba(128, 0, 128, 1);
+                            border: 1px solid rgba(128, 0, 128, 1);
+                        }
+                    }
+                }
+                .course-datalist{
+                    background-color: $white-color;
+                    border-radius: 30px;
+                    // margin: 1rem 0;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    .datalist-headings{
+                        display: grid;
+                        grid-template-columns: 33% 25% 10% 32%;
+                        border-bottom: 1px solid rgba(51, 51, 51, 1);
+                        padding: 1rem 0.75rem 1em 1rem;
+                        .level{
+                            text-align: left;
+                            font-size: 18px;
+                        }
+                        .enrolled{
+                            text-align: center;
+                            padding: 0 2.5rem;
+                        }
+                    }
+                    .data-list{
+                        display: grid;
+                        grid-template-columns: 35% 25% 10% 30%;
+                        // text-align: center;
+                        padding: 0;
+                        width: 100%;
+                        margin: 0;
+                        .user-details{
+                            display: flex;
+                            flex-direction: row wrap;
+                            // grid-template-columns: 25% 75%;
+                            // padding: 1rem 0.75rem;
+                            img{
+                                width: 27px;
+                                height: 27px;
+                                padding: 0.75rem 0;
+                                margin: 0;
+                                // padding: 0.50rem 0;
+                            }
+                            p{
+                                text-align: left;
+                                // padding: 0.55rem 0 0 0.25rem;
+                            }
+                        }
+                        .current-status{
+                            padding: 2rem 0;
+                            .btn-graded{
+                                background-color: rgba(0, 204, 57, 1);
+                                margin: 1rem 0.75rem;
+                                border-radius: 8px;
+                                border: 1px solid rgba(0, 204, 57, 1);
+                                color: $white-color;
+                                padding: 0.5rem;
+                                text-decoration: none;
+                            }
+                            .btn-pending{
+                                background-color: rgba(51, 51, 51, 1);
+                                margin: 1rem 0.75rem;
+                                border-radius: 8px;
+                                border: 1px solid rgba(51, 51, 51, 1);
+                                color: $white-color;
+                                padding: 0.5rem;
+                                text-decoration: none;
+                            }
+                        }
+                        .date, .enrolled-courses, .current-status{
+                            font-family: Work Sans;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 19px;
+                            letter-spacing: 0em;
+                            padding: 1.5rem 0.75rem;
+                        }
+                    }
+                }
             }
             footer{
                 display: grid;

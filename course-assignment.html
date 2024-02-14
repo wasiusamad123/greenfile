@@ -109,11 +109,11 @@
         </div>
         <div class="course-and-assignment">
             <div class="course-list">
-                <span><input type="radio" name="all" id="all">All</span>
-                <div class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</div>
-                <div class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</div>
-                <div class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</div>
-                <div class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</div>
+                <label class="course-radio"><input type="radio" name="all" id="all">All</label>
+                <label class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</label>
+                <label class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</label>
+                <label class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</label>
+                <label class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</label>
             </div>
             
             <div class="course-assignment">
@@ -202,7 +202,7 @@
                 </div>
                 <div class="publish-assignment">
                     <form method="post" action="">
-                        <textarea class="text-editor" id="message" name="message" cols="30" rows="10"></textarea><br>
+                        <textarea class="text-editor" id="message" name="message" placeholder="Your message here..." cols="30" rows="10"></textarea><br>
                         <div class="form-control">
                         <button name="submit" type="submit">Publish</button>
                         <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,18 +243,22 @@
         .catch(error => {
             console.error(error);
         });
-
-const radioButtons = document.querySelectorAll('.course-list input[type="radio"]');
-
-radioButtons.forEach(radioButton => {
-    radioButton.addEventListener('click', function() {
-        radioButtons.forEach(otherRadioButton => {
-            if (otherRadioButton !== radioButton) {
-                otherRadioButton.disabled = true;
-            }
+</script>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+        
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener('click', function () {
+                radioButtons.forEach(function (rb) {
+                    if (rb !== radioButton) {
+                        rb.checked = false;
+                    }
+                });
+            });
         });
     });
-});
-</script>
+    </script>
 </body>
 </html>
