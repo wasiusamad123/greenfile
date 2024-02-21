@@ -1,0 +1,1180 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+* {
+  box-shadow: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans";
+}
+
+.light-theme {
+  background-color: rgb(255, 255, 255);
+  color: rgb(19, 0, 19);
+}
+
+.dark-theme {
+  background-color: rgb(19, 0, 19);
+  color: rgb(255, 255, 255);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+body .dashboard {
+  display: flex;
+  flex-direction: row wrap;
+  /* The ::-webkit-scrollbar-thumb pseudo-element targets the draggable handle */
+  /* The ::-webkit-scrollbar-track pseudo-element targets the background of the scrollbar */
+}
+body .dashboard .sidebar {
+  background-color: rgb(19, 0, 19);
+  border-top-right-radius: 16px;
+  padding: 1rem;
+  display: block;
+  flex: 1;
+  overflow-y: scroll;
+}
+body .dashboard .sidebar .logo-name {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 1rem;
+}
+body .dashboard .sidebar .logo-name img {
+  padding: 1rem;
+}
+body .dashboard .sidebar .logo-name .slide-back {
+  display: none;
+}
+body .dashboard .sidebar .sidebar-content ul {
+  padding: 0.1rem 0;
+}
+body .dashboard .sidebar .sidebar-content ul li {
+  margin-top: 1.5rem;
+  display: flex;
+}
+body .dashboard .sidebar .sidebar-content ul li svg {
+  padding: 0 0.5rem;
+}
+body .dashboard .sidebar .sidebar-content ul li a {
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+}
+body .dashboard .sidebar .sidebar-content ul li .dash-link {
+  color: rgb(255, 165, 0);
+}
+body .dashboard .sidebar .sidebar-content ul li:hover {
+  border-left: 2px solid rgb(255, 255, 255);
+}
+body .dashboard .sidebar .sidebar-content ul li:active {
+  color: yellow;
+}
+body .dashboard .sidebar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+body .dashboard .sidebar::-webkit-scrollbar-thumb {
+  background-color: #666; /* Color of the scrollbar handle */
+}
+body .dashboard .sidebar::-webkit-scrollbar-track {
+  background-color: #222; /* Color of the scrollbar track */
+}
+body .dashboard .main {
+  background-color: rgb(245, 245, 220);
+  padding: 1rem 1rem 0 1rem;
+  flex: 4;
+  transition: 0.5s ease-in;
+}
+body .dashboard .main .header {
+  display: grid;
+  grid-template-columns: 3% 32% 35% 30%;
+}
+body .dashboard .main .header .toggle-btn {
+  cursor: pointer;
+}
+body .dashboard .main .header .search-input input {
+  width: 330px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0px, 0px, 0px, 15px;
+  gap: 20px;
+  font-family: "Work Sans";
+  font-size: 18px;
+}
+body .dashboard .main .header .user-name {
+  font-family: "Work Sans";
+  color: rgb(128, 0, 128);
+  justify-content: right;
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  padding-top: 0.5rem;
+  font-weight: 600;
+}
+body .dashboard .main .header .alert-icon ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+}
+body .dashboard .main .header .alert-icon ul li {
+  padding: 10px 30px;
+}
+body .dashboard .main .login-name p {
+  font-family: Work Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .settings {
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+  padding: 1rem;
+}
+body .dashboard .main .settings .notification-bell, body .dashboard .main .settings .announcements, body .dashboard .main .settings .comm-section, body .dashboard .main .settings .general-settings {
+  display: flex;
+  padding: 1rem;
+}
+body .dashboard .main .settings .notification-bell .svg-toggle svg, body .dashboard .main .settings .notification-bell .announce-svg svg, body .dashboard .main .settings .notification-bell .comm-svg svg, body .dashboard .main .settings .notification-bell .general-svg svg, body .dashboard .main .settings .announcements .svg-toggle svg, body .dashboard .main .settings .announcements .announce-svg svg, body .dashboard .main .settings .announcements .comm-svg svg, body .dashboard .main .settings .announcements .general-svg svg, body .dashboard .main .settings .comm-section .svg-toggle svg, body .dashboard .main .settings .comm-section .announce-svg svg, body .dashboard .main .settings .comm-section .comm-svg svg, body .dashboard .main .settings .comm-section .general-svg svg, body .dashboard .main .settings .general-settings .svg-toggle svg, body .dashboard .main .settings .general-settings .announce-svg svg, body .dashboard .main .settings .general-settings .comm-svg svg, body .dashboard .main .settings .general-settings .general-svg svg {
+  height: 24px;
+  width: 24px;
+}
+body .dashboard .main .settings .notification-bell .notify-text p, body .dashboard .main .settings .notification-bell .announce-title p, body .dashboard .main .settings .notification-bell .comm-title p, body .dashboard .main .settings .notification-bell .general-text p, body .dashboard .main .settings .announcements .notify-text p, body .dashboard .main .settings .announcements .announce-title p, body .dashboard .main .settings .announcements .comm-title p, body .dashboard .main .settings .announcements .general-text p, body .dashboard .main .settings .comm-section .notify-text p, body .dashboard .main .settings .comm-section .announce-title p, body .dashboard .main .settings .comm-section .comm-title p, body .dashboard .main .settings .comm-section .general-text p, body .dashboard .main .settings .general-settings .notify-text p, body .dashboard .main .settings .general-settings .announce-title p, body .dashboard .main .settings .general-settings .comm-title p, body .dashboard .main .settings .general-settings .general-text p {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  padding: 0.15rem;
+  text-align: left;
+}
+body .dashboard .main .settings .users-sections, body .dashboard .main .settings .admin-announce, body .dashboard .main .settings .screen-sections {
+  border-bottom: 1px solid rgb(51, 51, 51);
+}
+body .dashboard .main .settings .users-sections .in-app, body .dashboard .main .settings .users-sections .email, body .dashboard .main .settings .users-sections .sound, body .dashboard .main .settings .users-sections .announce-all, body .dashboard .main .settings .users-sections .admin-only, body .dashboard .main .settings .users-sections .std-only, body .dashboard .main .settings .users-sections .screen-pop, body .dashboard .main .settings .admin-announce .in-app, body .dashboard .main .settings .admin-announce .email, body .dashboard .main .settings .admin-announce .sound, body .dashboard .main .settings .admin-announce .announce-all, body .dashboard .main .settings .admin-announce .admin-only, body .dashboard .main .settings .admin-announce .std-only, body .dashboard .main .settings .admin-announce .screen-pop, body .dashboard .main .settings .screen-sections .in-app, body .dashboard .main .settings .screen-sections .email, body .dashboard .main .settings .screen-sections .sound, body .dashboard .main .settings .screen-sections .announce-all, body .dashboard .main .settings .screen-sections .admin-only, body .dashboard .main .settings .screen-sections .std-only, body .dashboard .main .settings .screen-sections .screen-pop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.5rem;
+}
+body .dashboard .main .settings .users-sections .in-app .app-text p, body .dashboard .main .settings .users-sections .in-app .email-text p, body .dashboard .main .settings .users-sections .in-app .sound-text p, body .dashboard .main .settings .users-sections .in-app .to-all p, body .dashboard .main .settings .users-sections .in-app .adm-only p, body .dashboard .main .settings .users-sections .in-app .std-text p, body .dashboard .main .settings .users-sections .in-app .screen-text p, body .dashboard .main .settings .users-sections .email .app-text p, body .dashboard .main .settings .users-sections .email .email-text p, body .dashboard .main .settings .users-sections .email .sound-text p, body .dashboard .main .settings .users-sections .email .to-all p, body .dashboard .main .settings .users-sections .email .adm-only p, body .dashboard .main .settings .users-sections .email .std-text p, body .dashboard .main .settings .users-sections .email .screen-text p, body .dashboard .main .settings .users-sections .sound .app-text p, body .dashboard .main .settings .users-sections .sound .email-text p, body .dashboard .main .settings .users-sections .sound .sound-text p, body .dashboard .main .settings .users-sections .sound .to-all p, body .dashboard .main .settings .users-sections .sound .adm-only p, body .dashboard .main .settings .users-sections .sound .std-text p, body .dashboard .main .settings .users-sections .sound .screen-text p, body .dashboard .main .settings .users-sections .announce-all .app-text p, body .dashboard .main .settings .users-sections .announce-all .email-text p, body .dashboard .main .settings .users-sections .announce-all .sound-text p, body .dashboard .main .settings .users-sections .announce-all .to-all p, body .dashboard .main .settings .users-sections .announce-all .adm-only p, body .dashboard .main .settings .users-sections .announce-all .std-text p, body .dashboard .main .settings .users-sections .announce-all .screen-text p, body .dashboard .main .settings .users-sections .admin-only .app-text p, body .dashboard .main .settings .users-sections .admin-only .email-text p, body .dashboard .main .settings .users-sections .admin-only .sound-text p, body .dashboard .main .settings .users-sections .admin-only .to-all p, body .dashboard .main .settings .users-sections .admin-only .adm-only p, body .dashboard .main .settings .users-sections .admin-only .std-text p, body .dashboard .main .settings .users-sections .admin-only .screen-text p, body .dashboard .main .settings .users-sections .std-only .app-text p, body .dashboard .main .settings .users-sections .std-only .email-text p, body .dashboard .main .settings .users-sections .std-only .sound-text p, body .dashboard .main .settings .users-sections .std-only .to-all p, body .dashboard .main .settings .users-sections .std-only .adm-only p, body .dashboard .main .settings .users-sections .std-only .std-text p, body .dashboard .main .settings .users-sections .std-only .screen-text p, body .dashboard .main .settings .users-sections .screen-pop .app-text p, body .dashboard .main .settings .users-sections .screen-pop .email-text p, body .dashboard .main .settings .users-sections .screen-pop .sound-text p, body .dashboard .main .settings .users-sections .screen-pop .to-all p, body .dashboard .main .settings .users-sections .screen-pop .adm-only p, body .dashboard .main .settings .users-sections .screen-pop .std-text p, body .dashboard .main .settings .users-sections .screen-pop .screen-text p, body .dashboard .main .settings .admin-announce .in-app .app-text p, body .dashboard .main .settings .admin-announce .in-app .email-text p, body .dashboard .main .settings .admin-announce .in-app .sound-text p, body .dashboard .main .settings .admin-announce .in-app .to-all p, body .dashboard .main .settings .admin-announce .in-app .adm-only p, body .dashboard .main .settings .admin-announce .in-app .std-text p, body .dashboard .main .settings .admin-announce .in-app .screen-text p, body .dashboard .main .settings .admin-announce .email .app-text p, body .dashboard .main .settings .admin-announce .email .email-text p, body .dashboard .main .settings .admin-announce .email .sound-text p, body .dashboard .main .settings .admin-announce .email .to-all p, body .dashboard .main .settings .admin-announce .email .adm-only p, body .dashboard .main .settings .admin-announce .email .std-text p, body .dashboard .main .settings .admin-announce .email .screen-text p, body .dashboard .main .settings .admin-announce .sound .app-text p, body .dashboard .main .settings .admin-announce .sound .email-text p, body .dashboard .main .settings .admin-announce .sound .sound-text p, body .dashboard .main .settings .admin-announce .sound .to-all p, body .dashboard .main .settings .admin-announce .sound .adm-only p, body .dashboard .main .settings .admin-announce .sound .std-text p, body .dashboard .main .settings .admin-announce .sound .screen-text p, body .dashboard .main .settings .admin-announce .announce-all .app-text p, body .dashboard .main .settings .admin-announce .announce-all .email-text p, body .dashboard .main .settings .admin-announce .announce-all .sound-text p, body .dashboard .main .settings .admin-announce .announce-all .to-all p, body .dashboard .main .settings .admin-announce .announce-all .adm-only p, body .dashboard .main .settings .admin-announce .announce-all .std-text p, body .dashboard .main .settings .admin-announce .announce-all .screen-text p, body .dashboard .main .settings .admin-announce .admin-only .app-text p, body .dashboard .main .settings .admin-announce .admin-only .email-text p, body .dashboard .main .settings .admin-announce .admin-only .sound-text p, body .dashboard .main .settings .admin-announce .admin-only .to-all p, body .dashboard .main .settings .admin-announce .admin-only .adm-only p, body .dashboard .main .settings .admin-announce .admin-only .std-text p, body .dashboard .main .settings .admin-announce .admin-only .screen-text p, body .dashboard .main .settings .admin-announce .std-only .app-text p, body .dashboard .main .settings .admin-announce .std-only .email-text p, body .dashboard .main .settings .admin-announce .std-only .sound-text p, body .dashboard .main .settings .admin-announce .std-only .to-all p, body .dashboard .main .settings .admin-announce .std-only .adm-only p, body .dashboard .main .settings .admin-announce .std-only .std-text p, body .dashboard .main .settings .admin-announce .std-only .screen-text p, body .dashboard .main .settings .admin-announce .screen-pop .app-text p, body .dashboard .main .settings .admin-announce .screen-pop .email-text p, body .dashboard .main .settings .admin-announce .screen-pop .sound-text p, body .dashboard .main .settings .admin-announce .screen-pop .to-all p, body .dashboard .main .settings .admin-announce .screen-pop .adm-only p, body .dashboard .main .settings .admin-announce .screen-pop .std-text p, body .dashboard .main .settings .admin-announce .screen-pop .screen-text p, body .dashboard .main .settings .screen-sections .in-app .app-text p, body .dashboard .main .settings .screen-sections .in-app .email-text p, body .dashboard .main .settings .screen-sections .in-app .sound-text p, body .dashboard .main .settings .screen-sections .in-app .to-all p, body .dashboard .main .settings .screen-sections .in-app .adm-only p, body .dashboard .main .settings .screen-sections .in-app .std-text p, body .dashboard .main .settings .screen-sections .in-app .screen-text p, body .dashboard .main .settings .screen-sections .email .app-text p, body .dashboard .main .settings .screen-sections .email .email-text p, body .dashboard .main .settings .screen-sections .email .sound-text p, body .dashboard .main .settings .screen-sections .email .to-all p, body .dashboard .main .settings .screen-sections .email .adm-only p, body .dashboard .main .settings .screen-sections .email .std-text p, body .dashboard .main .settings .screen-sections .email .screen-text p, body .dashboard .main .settings .screen-sections .sound .app-text p, body .dashboard .main .settings .screen-sections .sound .email-text p, body .dashboard .main .settings .screen-sections .sound .sound-text p, body .dashboard .main .settings .screen-sections .sound .to-all p, body .dashboard .main .settings .screen-sections .sound .adm-only p, body .dashboard .main .settings .screen-sections .sound .std-text p, body .dashboard .main .settings .screen-sections .sound .screen-text p, body .dashboard .main .settings .screen-sections .announce-all .app-text p, body .dashboard .main .settings .screen-sections .announce-all .email-text p, body .dashboard .main .settings .screen-sections .announce-all .sound-text p, body .dashboard .main .settings .screen-sections .announce-all .to-all p, body .dashboard .main .settings .screen-sections .announce-all .adm-only p, body .dashboard .main .settings .screen-sections .announce-all .std-text p, body .dashboard .main .settings .screen-sections .announce-all .screen-text p, body .dashboard .main .settings .screen-sections .admin-only .app-text p, body .dashboard .main .settings .screen-sections .admin-only .email-text p, body .dashboard .main .settings .screen-sections .admin-only .sound-text p, body .dashboard .main .settings .screen-sections .admin-only .to-all p, body .dashboard .main .settings .screen-sections .admin-only .adm-only p, body .dashboard .main .settings .screen-sections .admin-only .std-text p, body .dashboard .main .settings .screen-sections .admin-only .screen-text p, body .dashboard .main .settings .screen-sections .std-only .app-text p, body .dashboard .main .settings .screen-sections .std-only .email-text p, body .dashboard .main .settings .screen-sections .std-only .sound-text p, body .dashboard .main .settings .screen-sections .std-only .to-all p, body .dashboard .main .settings .screen-sections .std-only .adm-only p, body .dashboard .main .settings .screen-sections .std-only .std-text p, body .dashboard .main .settings .screen-sections .std-only .screen-text p, body .dashboard .main .settings .screen-sections .screen-pop .app-text p, body .dashboard .main .settings .screen-sections .screen-pop .email-text p, body .dashboard .main .settings .screen-sections .screen-pop .sound-text p, body .dashboard .main .settings .screen-sections .screen-pop .to-all p, body .dashboard .main .settings .screen-sections .screen-pop .adm-only p, body .dashboard .main .settings .screen-sections .screen-pop .std-text p, body .dashboard .main .settings .screen-sections .screen-pop .screen-text p {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg, body .dashboard .main .settings .users-sections .in-app .email-svg, body .dashboard .main .settings .users-sections .in-app .sound-svg, body .dashboard .main .settings .users-sections .in-app .all-svg, body .dashboard .main .settings .users-sections .in-app .adm-svg, body .dashboard .main .settings .users-sections .in-app .std-svg, body .dashboard .main .settings .users-sections .in-app .screen-svg, body .dashboard .main .settings .users-sections .email .app-svg, body .dashboard .main .settings .users-sections .email .email-svg, body .dashboard .main .settings .users-sections .email .sound-svg, body .dashboard .main .settings .users-sections .email .all-svg, body .dashboard .main .settings .users-sections .email .adm-svg, body .dashboard .main .settings .users-sections .email .std-svg, body .dashboard .main .settings .users-sections .email .screen-svg, body .dashboard .main .settings .users-sections .sound .app-svg, body .dashboard .main .settings .users-sections .sound .email-svg, body .dashboard .main .settings .users-sections .sound .sound-svg, body .dashboard .main .settings .users-sections .sound .all-svg, body .dashboard .main .settings .users-sections .sound .adm-svg, body .dashboard .main .settings .users-sections .sound .std-svg, body .dashboard .main .settings .users-sections .sound .screen-svg, body .dashboard .main .settings .users-sections .announce-all .app-svg, body .dashboard .main .settings .users-sections .announce-all .email-svg, body .dashboard .main .settings .users-sections .announce-all .sound-svg, body .dashboard .main .settings .users-sections .announce-all .all-svg, body .dashboard .main .settings .users-sections .announce-all .adm-svg, body .dashboard .main .settings .users-sections .announce-all .std-svg, body .dashboard .main .settings .users-sections .announce-all .screen-svg, body .dashboard .main .settings .users-sections .admin-only .app-svg, body .dashboard .main .settings .users-sections .admin-only .email-svg, body .dashboard .main .settings .users-sections .admin-only .sound-svg, body .dashboard .main .settings .users-sections .admin-only .all-svg, body .dashboard .main .settings .users-sections .admin-only .adm-svg, body .dashboard .main .settings .users-sections .admin-only .std-svg, body .dashboard .main .settings .users-sections .admin-only .screen-svg, body .dashboard .main .settings .users-sections .std-only .app-svg, body .dashboard .main .settings .users-sections .std-only .email-svg, body .dashboard .main .settings .users-sections .std-only .sound-svg, body .dashboard .main .settings .users-sections .std-only .all-svg, body .dashboard .main .settings .users-sections .std-only .adm-svg, body .dashboard .main .settings .users-sections .std-only .std-svg, body .dashboard .main .settings .users-sections .std-only .screen-svg, body .dashboard .main .settings .users-sections .screen-pop .app-svg, body .dashboard .main .settings .users-sections .screen-pop .email-svg, body .dashboard .main .settings .users-sections .screen-pop .sound-svg, body .dashboard .main .settings .users-sections .screen-pop .all-svg, body .dashboard .main .settings .users-sections .screen-pop .adm-svg, body .dashboard .main .settings .users-sections .screen-pop .std-svg, body .dashboard .main .settings .users-sections .screen-pop .screen-svg, body .dashboard .main .settings .admin-announce .in-app .app-svg, body .dashboard .main .settings .admin-announce .in-app .email-svg, body .dashboard .main .settings .admin-announce .in-app .sound-svg, body .dashboard .main .settings .admin-announce .in-app .all-svg, body .dashboard .main .settings .admin-announce .in-app .adm-svg, body .dashboard .main .settings .admin-announce .in-app .std-svg, body .dashboard .main .settings .admin-announce .in-app .screen-svg, body .dashboard .main .settings .admin-announce .email .app-svg, body .dashboard .main .settings .admin-announce .email .email-svg, body .dashboard .main .settings .admin-announce .email .sound-svg, body .dashboard .main .settings .admin-announce .email .all-svg, body .dashboard .main .settings .admin-announce .email .adm-svg, body .dashboard .main .settings .admin-announce .email .std-svg, body .dashboard .main .settings .admin-announce .email .screen-svg, body .dashboard .main .settings .admin-announce .sound .app-svg, body .dashboard .main .settings .admin-announce .sound .email-svg, body .dashboard .main .settings .admin-announce .sound .sound-svg, body .dashboard .main .settings .admin-announce .sound .all-svg, body .dashboard .main .settings .admin-announce .sound .adm-svg, body .dashboard .main .settings .admin-announce .sound .std-svg, body .dashboard .main .settings .admin-announce .sound .screen-svg, body .dashboard .main .settings .admin-announce .announce-all .app-svg, body .dashboard .main .settings .admin-announce .announce-all .email-svg, body .dashboard .main .settings .admin-announce .announce-all .sound-svg, body .dashboard .main .settings .admin-announce .announce-all .all-svg, body .dashboard .main .settings .admin-announce .announce-all .adm-svg, body .dashboard .main .settings .admin-announce .announce-all .std-svg, body .dashboard .main .settings .admin-announce .announce-all .screen-svg, body .dashboard .main .settings .admin-announce .admin-only .app-svg, body .dashboard .main .settings .admin-announce .admin-only .email-svg, body .dashboard .main .settings .admin-announce .admin-only .sound-svg, body .dashboard .main .settings .admin-announce .admin-only .all-svg, body .dashboard .main .settings .admin-announce .admin-only .adm-svg, body .dashboard .main .settings .admin-announce .admin-only .std-svg, body .dashboard .main .settings .admin-announce .admin-only .screen-svg, body .dashboard .main .settings .admin-announce .std-only .app-svg, body .dashboard .main .settings .admin-announce .std-only .email-svg, body .dashboard .main .settings .admin-announce .std-only .sound-svg, body .dashboard .main .settings .admin-announce .std-only .all-svg, body .dashboard .main .settings .admin-announce .std-only .adm-svg, body .dashboard .main .settings .admin-announce .std-only .std-svg, body .dashboard .main .settings .admin-announce .std-only .screen-svg, body .dashboard .main .settings .admin-announce .screen-pop .app-svg, body .dashboard .main .settings .admin-announce .screen-pop .email-svg, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg, body .dashboard .main .settings .admin-announce .screen-pop .all-svg, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg, body .dashboard .main .settings .admin-announce .screen-pop .std-svg, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg, body .dashboard .main .settings .screen-sections .in-app .app-svg, body .dashboard .main .settings .screen-sections .in-app .email-svg, body .dashboard .main .settings .screen-sections .in-app .sound-svg, body .dashboard .main .settings .screen-sections .in-app .all-svg, body .dashboard .main .settings .screen-sections .in-app .adm-svg, body .dashboard .main .settings .screen-sections .in-app .std-svg, body .dashboard .main .settings .screen-sections .in-app .screen-svg, body .dashboard .main .settings .screen-sections .email .app-svg, body .dashboard .main .settings .screen-sections .email .email-svg, body .dashboard .main .settings .screen-sections .email .sound-svg, body .dashboard .main .settings .screen-sections .email .all-svg, body .dashboard .main .settings .screen-sections .email .adm-svg, body .dashboard .main .settings .screen-sections .email .std-svg, body .dashboard .main .settings .screen-sections .email .screen-svg, body .dashboard .main .settings .screen-sections .sound .app-svg, body .dashboard .main .settings .screen-sections .sound .email-svg, body .dashboard .main .settings .screen-sections .sound .sound-svg, body .dashboard .main .settings .screen-sections .sound .all-svg, body .dashboard .main .settings .screen-sections .sound .adm-svg, body .dashboard .main .settings .screen-sections .sound .std-svg, body .dashboard .main .settings .screen-sections .sound .screen-svg, body .dashboard .main .settings .screen-sections .announce-all .app-svg, body .dashboard .main .settings .screen-sections .announce-all .email-svg, body .dashboard .main .settings .screen-sections .announce-all .sound-svg, body .dashboard .main .settings .screen-sections .announce-all .all-svg, body .dashboard .main .settings .screen-sections .announce-all .adm-svg, body .dashboard .main .settings .screen-sections .announce-all .std-svg, body .dashboard .main .settings .screen-sections .announce-all .screen-svg, body .dashboard .main .settings .screen-sections .admin-only .app-svg, body .dashboard .main .settings .screen-sections .admin-only .email-svg, body .dashboard .main .settings .screen-sections .admin-only .sound-svg, body .dashboard .main .settings .screen-sections .admin-only .all-svg, body .dashboard .main .settings .screen-sections .admin-only .adm-svg, body .dashboard .main .settings .screen-sections .admin-only .std-svg, body .dashboard .main .settings .screen-sections .admin-only .screen-svg, body .dashboard .main .settings .screen-sections .std-only .app-svg, body .dashboard .main .settings .screen-sections .std-only .email-svg, body .dashboard .main .settings .screen-sections .std-only .sound-svg, body .dashboard .main .settings .screen-sections .std-only .all-svg, body .dashboard .main .settings .screen-sections .std-only .adm-svg, body .dashboard .main .settings .screen-sections .std-only .std-svg, body .dashboard .main .settings .screen-sections .std-only .screen-svg, body .dashboard .main .settings .screen-sections .screen-pop .app-svg, body .dashboard .main .settings .screen-sections .screen-pop .email-svg, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg, body .dashboard .main .settings .screen-sections .screen-pop .all-svg, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg, body .dashboard .main .settings .screen-sections .screen-pop .std-svg, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg {
+  text-align: right;
+  /* Rounded sliders */
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg svg, body .dashboard .main .settings .users-sections .in-app .email-svg svg, body .dashboard .main .settings .users-sections .in-app .sound-svg svg, body .dashboard .main .settings .users-sections .in-app .all-svg svg, body .dashboard .main .settings .users-sections .in-app .adm-svg svg, body .dashboard .main .settings .users-sections .in-app .std-svg svg, body .dashboard .main .settings .users-sections .in-app .screen-svg svg, body .dashboard .main .settings .users-sections .email .app-svg svg, body .dashboard .main .settings .users-sections .email .email-svg svg, body .dashboard .main .settings .users-sections .email .sound-svg svg, body .dashboard .main .settings .users-sections .email .all-svg svg, body .dashboard .main .settings .users-sections .email .adm-svg svg, body .dashboard .main .settings .users-sections .email .std-svg svg, body .dashboard .main .settings .users-sections .email .screen-svg svg, body .dashboard .main .settings .users-sections .sound .app-svg svg, body .dashboard .main .settings .users-sections .sound .email-svg svg, body .dashboard .main .settings .users-sections .sound .sound-svg svg, body .dashboard .main .settings .users-sections .sound .all-svg svg, body .dashboard .main .settings .users-sections .sound .adm-svg svg, body .dashboard .main .settings .users-sections .sound .std-svg svg, body .dashboard .main .settings .users-sections .sound .screen-svg svg, body .dashboard .main .settings .users-sections .announce-all .app-svg svg, body .dashboard .main .settings .users-sections .announce-all .email-svg svg, body .dashboard .main .settings .users-sections .announce-all .sound-svg svg, body .dashboard .main .settings .users-sections .announce-all .all-svg svg, body .dashboard .main .settings .users-sections .announce-all .adm-svg svg, body .dashboard .main .settings .users-sections .announce-all .std-svg svg, body .dashboard .main .settings .users-sections .announce-all .screen-svg svg, body .dashboard .main .settings .users-sections .admin-only .app-svg svg, body .dashboard .main .settings .users-sections .admin-only .email-svg svg, body .dashboard .main .settings .users-sections .admin-only .sound-svg svg, body .dashboard .main .settings .users-sections .admin-only .all-svg svg, body .dashboard .main .settings .users-sections .admin-only .adm-svg svg, body .dashboard .main .settings .users-sections .admin-only .std-svg svg, body .dashboard .main .settings .users-sections .admin-only .screen-svg svg, body .dashboard .main .settings .users-sections .std-only .app-svg svg, body .dashboard .main .settings .users-sections .std-only .email-svg svg, body .dashboard .main .settings .users-sections .std-only .sound-svg svg, body .dashboard .main .settings .users-sections .std-only .all-svg svg, body .dashboard .main .settings .users-sections .std-only .adm-svg svg, body .dashboard .main .settings .users-sections .std-only .std-svg svg, body .dashboard .main .settings .users-sections .std-only .screen-svg svg, body .dashboard .main .settings .users-sections .screen-pop .app-svg svg, body .dashboard .main .settings .users-sections .screen-pop .email-svg svg, body .dashboard .main .settings .users-sections .screen-pop .sound-svg svg, body .dashboard .main .settings .users-sections .screen-pop .all-svg svg, body .dashboard .main .settings .users-sections .screen-pop .adm-svg svg, body .dashboard .main .settings .users-sections .screen-pop .std-svg svg, body .dashboard .main .settings .users-sections .screen-pop .screen-svg svg, body .dashboard .main .settings .admin-announce .in-app .app-svg svg, body .dashboard .main .settings .admin-announce .in-app .email-svg svg, body .dashboard .main .settings .admin-announce .in-app .sound-svg svg, body .dashboard .main .settings .admin-announce .in-app .all-svg svg, body .dashboard .main .settings .admin-announce .in-app .adm-svg svg, body .dashboard .main .settings .admin-announce .in-app .std-svg svg, body .dashboard .main .settings .admin-announce .in-app .screen-svg svg, body .dashboard .main .settings .admin-announce .email .app-svg svg, body .dashboard .main .settings .admin-announce .email .email-svg svg, body .dashboard .main .settings .admin-announce .email .sound-svg svg, body .dashboard .main .settings .admin-announce .email .all-svg svg, body .dashboard .main .settings .admin-announce .email .adm-svg svg, body .dashboard .main .settings .admin-announce .email .std-svg svg, body .dashboard .main .settings .admin-announce .email .screen-svg svg, body .dashboard .main .settings .admin-announce .sound .app-svg svg, body .dashboard .main .settings .admin-announce .sound .email-svg svg, body .dashboard .main .settings .admin-announce .sound .sound-svg svg, body .dashboard .main .settings .admin-announce .sound .all-svg svg, body .dashboard .main .settings .admin-announce .sound .adm-svg svg, body .dashboard .main .settings .admin-announce .sound .std-svg svg, body .dashboard .main .settings .admin-announce .sound .screen-svg svg, body .dashboard .main .settings .admin-announce .announce-all .app-svg svg, body .dashboard .main .settings .admin-announce .announce-all .email-svg svg, body .dashboard .main .settings .admin-announce .announce-all .sound-svg svg, body .dashboard .main .settings .admin-announce .announce-all .all-svg svg, body .dashboard .main .settings .admin-announce .announce-all .adm-svg svg, body .dashboard .main .settings .admin-announce .announce-all .std-svg svg, body .dashboard .main .settings .admin-announce .announce-all .screen-svg svg, body .dashboard .main .settings .admin-announce .admin-only .app-svg svg, body .dashboard .main .settings .admin-announce .admin-only .email-svg svg, body .dashboard .main .settings .admin-announce .admin-only .sound-svg svg, body .dashboard .main .settings .admin-announce .admin-only .all-svg svg, body .dashboard .main .settings .admin-announce .admin-only .adm-svg svg, body .dashboard .main .settings .admin-announce .admin-only .std-svg svg, body .dashboard .main .settings .admin-announce .admin-only .screen-svg svg, body .dashboard .main .settings .admin-announce .std-only .app-svg svg, body .dashboard .main .settings .admin-announce .std-only .email-svg svg, body .dashboard .main .settings .admin-announce .std-only .sound-svg svg, body .dashboard .main .settings .admin-announce .std-only .all-svg svg, body .dashboard .main .settings .admin-announce .std-only .adm-svg svg, body .dashboard .main .settings .admin-announce .std-only .std-svg svg, body .dashboard .main .settings .admin-announce .std-only .screen-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .app-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .email-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .all-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .std-svg svg, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg svg, body .dashboard .main .settings .screen-sections .in-app .app-svg svg, body .dashboard .main .settings .screen-sections .in-app .email-svg svg, body .dashboard .main .settings .screen-sections .in-app .sound-svg svg, body .dashboard .main .settings .screen-sections .in-app .all-svg svg, body .dashboard .main .settings .screen-sections .in-app .adm-svg svg, body .dashboard .main .settings .screen-sections .in-app .std-svg svg, body .dashboard .main .settings .screen-sections .in-app .screen-svg svg, body .dashboard .main .settings .screen-sections .email .app-svg svg, body .dashboard .main .settings .screen-sections .email .email-svg svg, body .dashboard .main .settings .screen-sections .email .sound-svg svg, body .dashboard .main .settings .screen-sections .email .all-svg svg, body .dashboard .main .settings .screen-sections .email .adm-svg svg, body .dashboard .main .settings .screen-sections .email .std-svg svg, body .dashboard .main .settings .screen-sections .email .screen-svg svg, body .dashboard .main .settings .screen-sections .sound .app-svg svg, body .dashboard .main .settings .screen-sections .sound .email-svg svg, body .dashboard .main .settings .screen-sections .sound .sound-svg svg, body .dashboard .main .settings .screen-sections .sound .all-svg svg, body .dashboard .main .settings .screen-sections .sound .adm-svg svg, body .dashboard .main .settings .screen-sections .sound .std-svg svg, body .dashboard .main .settings .screen-sections .sound .screen-svg svg, body .dashboard .main .settings .screen-sections .announce-all .app-svg svg, body .dashboard .main .settings .screen-sections .announce-all .email-svg svg, body .dashboard .main .settings .screen-sections .announce-all .sound-svg svg, body .dashboard .main .settings .screen-sections .announce-all .all-svg svg, body .dashboard .main .settings .screen-sections .announce-all .adm-svg svg, body .dashboard .main .settings .screen-sections .announce-all .std-svg svg, body .dashboard .main .settings .screen-sections .announce-all .screen-svg svg, body .dashboard .main .settings .screen-sections .admin-only .app-svg svg, body .dashboard .main .settings .screen-sections .admin-only .email-svg svg, body .dashboard .main .settings .screen-sections .admin-only .sound-svg svg, body .dashboard .main .settings .screen-sections .admin-only .all-svg svg, body .dashboard .main .settings .screen-sections .admin-only .adm-svg svg, body .dashboard .main .settings .screen-sections .admin-only .std-svg svg, body .dashboard .main .settings .screen-sections .admin-only .screen-svg svg, body .dashboard .main .settings .screen-sections .std-only .app-svg svg, body .dashboard .main .settings .screen-sections .std-only .email-svg svg, body .dashboard .main .settings .screen-sections .std-only .sound-svg svg, body .dashboard .main .settings .screen-sections .std-only .all-svg svg, body .dashboard .main .settings .screen-sections .std-only .adm-svg svg, body .dashboard .main .settings .screen-sections .std-only .std-svg svg, body .dashboard .main .settings .screen-sections .std-only .screen-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .app-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .email-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .all-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .std-svg svg, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg svg {
+  width: 30px;
+  height: 30px;
+  text-align: right;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg .switch, body .dashboard .main .settings .users-sections .in-app .email-svg .switch, body .dashboard .main .settings .users-sections .in-app .sound-svg .switch, body .dashboard .main .settings .users-sections .in-app .all-svg .switch, body .dashboard .main .settings .users-sections .in-app .adm-svg .switch, body .dashboard .main .settings .users-sections .in-app .std-svg .switch, body .dashboard .main .settings .users-sections .in-app .screen-svg .switch, body .dashboard .main .settings .users-sections .email .app-svg .switch, body .dashboard .main .settings .users-sections .email .email-svg .switch, body .dashboard .main .settings .users-sections .email .sound-svg .switch, body .dashboard .main .settings .users-sections .email .all-svg .switch, body .dashboard .main .settings .users-sections .email .adm-svg .switch, body .dashboard .main .settings .users-sections .email .std-svg .switch, body .dashboard .main .settings .users-sections .email .screen-svg .switch, body .dashboard .main .settings .users-sections .sound .app-svg .switch, body .dashboard .main .settings .users-sections .sound .email-svg .switch, body .dashboard .main .settings .users-sections .sound .sound-svg .switch, body .dashboard .main .settings .users-sections .sound .all-svg .switch, body .dashboard .main .settings .users-sections .sound .adm-svg .switch, body .dashboard .main .settings .users-sections .sound .std-svg .switch, body .dashboard .main .settings .users-sections .sound .screen-svg .switch, body .dashboard .main .settings .users-sections .announce-all .app-svg .switch, body .dashboard .main .settings .users-sections .announce-all .email-svg .switch, body .dashboard .main .settings .users-sections .announce-all .sound-svg .switch, body .dashboard .main .settings .users-sections .announce-all .all-svg .switch, body .dashboard .main .settings .users-sections .announce-all .adm-svg .switch, body .dashboard .main .settings .users-sections .announce-all .std-svg .switch, body .dashboard .main .settings .users-sections .announce-all .screen-svg .switch, body .dashboard .main .settings .users-sections .admin-only .app-svg .switch, body .dashboard .main .settings .users-sections .admin-only .email-svg .switch, body .dashboard .main .settings .users-sections .admin-only .sound-svg .switch, body .dashboard .main .settings .users-sections .admin-only .all-svg .switch, body .dashboard .main .settings .users-sections .admin-only .adm-svg .switch, body .dashboard .main .settings .users-sections .admin-only .std-svg .switch, body .dashboard .main .settings .users-sections .admin-only .screen-svg .switch, body .dashboard .main .settings .users-sections .std-only .app-svg .switch, body .dashboard .main .settings .users-sections .std-only .email-svg .switch, body .dashboard .main .settings .users-sections .std-only .sound-svg .switch, body .dashboard .main .settings .users-sections .std-only .all-svg .switch, body .dashboard .main .settings .users-sections .std-only .adm-svg .switch, body .dashboard .main .settings .users-sections .std-only .std-svg .switch, body .dashboard .main .settings .users-sections .std-only .screen-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .app-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .email-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .sound-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .all-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .adm-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .std-svg .switch, body .dashboard .main .settings .users-sections .screen-pop .screen-svg .switch, body .dashboard .main .settings .admin-announce .in-app .app-svg .switch, body .dashboard .main .settings .admin-announce .in-app .email-svg .switch, body .dashboard .main .settings .admin-announce .in-app .sound-svg .switch, body .dashboard .main .settings .admin-announce .in-app .all-svg .switch, body .dashboard .main .settings .admin-announce .in-app .adm-svg .switch, body .dashboard .main .settings .admin-announce .in-app .std-svg .switch, body .dashboard .main .settings .admin-announce .in-app .screen-svg .switch, body .dashboard .main .settings .admin-announce .email .app-svg .switch, body .dashboard .main .settings .admin-announce .email .email-svg .switch, body .dashboard .main .settings .admin-announce .email .sound-svg .switch, body .dashboard .main .settings .admin-announce .email .all-svg .switch, body .dashboard .main .settings .admin-announce .email .adm-svg .switch, body .dashboard .main .settings .admin-announce .email .std-svg .switch, body .dashboard .main .settings .admin-announce .email .screen-svg .switch, body .dashboard .main .settings .admin-announce .sound .app-svg .switch, body .dashboard .main .settings .admin-announce .sound .email-svg .switch, body .dashboard .main .settings .admin-announce .sound .sound-svg .switch, body .dashboard .main .settings .admin-announce .sound .all-svg .switch, body .dashboard .main .settings .admin-announce .sound .adm-svg .switch, body .dashboard .main .settings .admin-announce .sound .std-svg .switch, body .dashboard .main .settings .admin-announce .sound .screen-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .app-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .email-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .sound-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .all-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .adm-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .std-svg .switch, body .dashboard .main .settings .admin-announce .announce-all .screen-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .app-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .email-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .sound-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .all-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .adm-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .std-svg .switch, body .dashboard .main .settings .admin-announce .admin-only .screen-svg .switch, body .dashboard .main .settings .admin-announce .std-only .app-svg .switch, body .dashboard .main .settings .admin-announce .std-only .email-svg .switch, body .dashboard .main .settings .admin-announce .std-only .sound-svg .switch, body .dashboard .main .settings .admin-announce .std-only .all-svg .switch, body .dashboard .main .settings .admin-announce .std-only .adm-svg .switch, body .dashboard .main .settings .admin-announce .std-only .std-svg .switch, body .dashboard .main .settings .admin-announce .std-only .screen-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .app-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .email-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .all-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .std-svg .switch, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg .switch, body .dashboard .main .settings .screen-sections .in-app .app-svg .switch, body .dashboard .main .settings .screen-sections .in-app .email-svg .switch, body .dashboard .main .settings .screen-sections .in-app .sound-svg .switch, body .dashboard .main .settings .screen-sections .in-app .all-svg .switch, body .dashboard .main .settings .screen-sections .in-app .adm-svg .switch, body .dashboard .main .settings .screen-sections .in-app .std-svg .switch, body .dashboard .main .settings .screen-sections .in-app .screen-svg .switch, body .dashboard .main .settings .screen-sections .email .app-svg .switch, body .dashboard .main .settings .screen-sections .email .email-svg .switch, body .dashboard .main .settings .screen-sections .email .sound-svg .switch, body .dashboard .main .settings .screen-sections .email .all-svg .switch, body .dashboard .main .settings .screen-sections .email .adm-svg .switch, body .dashboard .main .settings .screen-sections .email .std-svg .switch, body .dashboard .main .settings .screen-sections .email .screen-svg .switch, body .dashboard .main .settings .screen-sections .sound .app-svg .switch, body .dashboard .main .settings .screen-sections .sound .email-svg .switch, body .dashboard .main .settings .screen-sections .sound .sound-svg .switch, body .dashboard .main .settings .screen-sections .sound .all-svg .switch, body .dashboard .main .settings .screen-sections .sound .adm-svg .switch, body .dashboard .main .settings .screen-sections .sound .std-svg .switch, body .dashboard .main .settings .screen-sections .sound .screen-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .app-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .email-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .sound-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .all-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .adm-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .std-svg .switch, body .dashboard .main .settings .screen-sections .announce-all .screen-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .app-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .email-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .sound-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .all-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .adm-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .std-svg .switch, body .dashboard .main .settings .screen-sections .admin-only .screen-svg .switch, body .dashboard .main .settings .screen-sections .std-only .app-svg .switch, body .dashboard .main .settings .screen-sections .std-only .email-svg .switch, body .dashboard .main .settings .screen-sections .std-only .sound-svg .switch, body .dashboard .main .settings .screen-sections .std-only .all-svg .switch, body .dashboard .main .settings .screen-sections .std-only .adm-svg .switch, body .dashboard .main .settings .screen-sections .std-only .std-svg .switch, body .dashboard .main .settings .screen-sections .std-only .screen-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .app-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .email-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .all-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .std-svg .switch, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg .switch input, body .dashboard .main .settings .users-sections .in-app .email-svg .switch input, body .dashboard .main .settings .users-sections .in-app .sound-svg .switch input, body .dashboard .main .settings .users-sections .in-app .all-svg .switch input, body .dashboard .main .settings .users-sections .in-app .adm-svg .switch input, body .dashboard .main .settings .users-sections .in-app .std-svg .switch input, body .dashboard .main .settings .users-sections .in-app .screen-svg .switch input, body .dashboard .main .settings .users-sections .email .app-svg .switch input, body .dashboard .main .settings .users-sections .email .email-svg .switch input, body .dashboard .main .settings .users-sections .email .sound-svg .switch input, body .dashboard .main .settings .users-sections .email .all-svg .switch input, body .dashboard .main .settings .users-sections .email .adm-svg .switch input, body .dashboard .main .settings .users-sections .email .std-svg .switch input, body .dashboard .main .settings .users-sections .email .screen-svg .switch input, body .dashboard .main .settings .users-sections .sound .app-svg .switch input, body .dashboard .main .settings .users-sections .sound .email-svg .switch input, body .dashboard .main .settings .users-sections .sound .sound-svg .switch input, body .dashboard .main .settings .users-sections .sound .all-svg .switch input, body .dashboard .main .settings .users-sections .sound .adm-svg .switch input, body .dashboard .main .settings .users-sections .sound .std-svg .switch input, body .dashboard .main .settings .users-sections .sound .screen-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .app-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .email-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .sound-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .all-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .adm-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .std-svg .switch input, body .dashboard .main .settings .users-sections .announce-all .screen-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .app-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .email-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .sound-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .all-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .adm-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .std-svg .switch input, body .dashboard .main .settings .users-sections .admin-only .screen-svg .switch input, body .dashboard .main .settings .users-sections .std-only .app-svg .switch input, body .dashboard .main .settings .users-sections .std-only .email-svg .switch input, body .dashboard .main .settings .users-sections .std-only .sound-svg .switch input, body .dashboard .main .settings .users-sections .std-only .all-svg .switch input, body .dashboard .main .settings .users-sections .std-only .adm-svg .switch input, body .dashboard .main .settings .users-sections .std-only .std-svg .switch input, body .dashboard .main .settings .users-sections .std-only .screen-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .app-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .email-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .sound-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .all-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .adm-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .std-svg .switch input, body .dashboard .main .settings .users-sections .screen-pop .screen-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .app-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .email-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .sound-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .all-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .adm-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .std-svg .switch input, body .dashboard .main .settings .admin-announce .in-app .screen-svg .switch input, body .dashboard .main .settings .admin-announce .email .app-svg .switch input, body .dashboard .main .settings .admin-announce .email .email-svg .switch input, body .dashboard .main .settings .admin-announce .email .sound-svg .switch input, body .dashboard .main .settings .admin-announce .email .all-svg .switch input, body .dashboard .main .settings .admin-announce .email .adm-svg .switch input, body .dashboard .main .settings .admin-announce .email .std-svg .switch input, body .dashboard .main .settings .admin-announce .email .screen-svg .switch input, body .dashboard .main .settings .admin-announce .sound .app-svg .switch input, body .dashboard .main .settings .admin-announce .sound .email-svg .switch input, body .dashboard .main .settings .admin-announce .sound .sound-svg .switch input, body .dashboard .main .settings .admin-announce .sound .all-svg .switch input, body .dashboard .main .settings .admin-announce .sound .adm-svg .switch input, body .dashboard .main .settings .admin-announce .sound .std-svg .switch input, body .dashboard .main .settings .admin-announce .sound .screen-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .app-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .email-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .sound-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .all-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .adm-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .std-svg .switch input, body .dashboard .main .settings .admin-announce .announce-all .screen-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .app-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .email-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .sound-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .all-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .adm-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .std-svg .switch input, body .dashboard .main .settings .admin-announce .admin-only .screen-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .app-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .email-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .sound-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .all-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .adm-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .std-svg .switch input, body .dashboard .main .settings .admin-announce .std-only .screen-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .app-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .email-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .all-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .std-svg .switch input, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .app-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .email-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .sound-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .all-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .adm-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .std-svg .switch input, body .dashboard .main .settings .screen-sections .in-app .screen-svg .switch input, body .dashboard .main .settings .screen-sections .email .app-svg .switch input, body .dashboard .main .settings .screen-sections .email .email-svg .switch input, body .dashboard .main .settings .screen-sections .email .sound-svg .switch input, body .dashboard .main .settings .screen-sections .email .all-svg .switch input, body .dashboard .main .settings .screen-sections .email .adm-svg .switch input, body .dashboard .main .settings .screen-sections .email .std-svg .switch input, body .dashboard .main .settings .screen-sections .email .screen-svg .switch input, body .dashboard .main .settings .screen-sections .sound .app-svg .switch input, body .dashboard .main .settings .screen-sections .sound .email-svg .switch input, body .dashboard .main .settings .screen-sections .sound .sound-svg .switch input, body .dashboard .main .settings .screen-sections .sound .all-svg .switch input, body .dashboard .main .settings .screen-sections .sound .adm-svg .switch input, body .dashboard .main .settings .screen-sections .sound .std-svg .switch input, body .dashboard .main .settings .screen-sections .sound .screen-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .app-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .email-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .sound-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .all-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .adm-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .std-svg .switch input, body .dashboard .main .settings .screen-sections .announce-all .screen-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .app-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .email-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .sound-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .all-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .adm-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .std-svg .switch input, body .dashboard .main .settings .screen-sections .admin-only .screen-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .app-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .email-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .sound-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .all-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .adm-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .std-svg .switch input, body .dashboard .main .settings .screen-sections .std-only .screen-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .app-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .email-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .all-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .std-svg .switch input, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg .slider, body .dashboard .main .settings .users-sections .in-app .email-svg .slider, body .dashboard .main .settings .users-sections .in-app .sound-svg .slider, body .dashboard .main .settings .users-sections .in-app .all-svg .slider, body .dashboard .main .settings .users-sections .in-app .adm-svg .slider, body .dashboard .main .settings .users-sections .in-app .std-svg .slider, body .dashboard .main .settings .users-sections .in-app .screen-svg .slider, body .dashboard .main .settings .users-sections .email .app-svg .slider, body .dashboard .main .settings .users-sections .email .email-svg .slider, body .dashboard .main .settings .users-sections .email .sound-svg .slider, body .dashboard .main .settings .users-sections .email .all-svg .slider, body .dashboard .main .settings .users-sections .email .adm-svg .slider, body .dashboard .main .settings .users-sections .email .std-svg .slider, body .dashboard .main .settings .users-sections .email .screen-svg .slider, body .dashboard .main .settings .users-sections .sound .app-svg .slider, body .dashboard .main .settings .users-sections .sound .email-svg .slider, body .dashboard .main .settings .users-sections .sound .sound-svg .slider, body .dashboard .main .settings .users-sections .sound .all-svg .slider, body .dashboard .main .settings .users-sections .sound .adm-svg .slider, body .dashboard .main .settings .users-sections .sound .std-svg .slider, body .dashboard .main .settings .users-sections .sound .screen-svg .slider, body .dashboard .main .settings .users-sections .announce-all .app-svg .slider, body .dashboard .main .settings .users-sections .announce-all .email-svg .slider, body .dashboard .main .settings .users-sections .announce-all .sound-svg .slider, body .dashboard .main .settings .users-sections .announce-all .all-svg .slider, body .dashboard .main .settings .users-sections .announce-all .adm-svg .slider, body .dashboard .main .settings .users-sections .announce-all .std-svg .slider, body .dashboard .main .settings .users-sections .announce-all .screen-svg .slider, body .dashboard .main .settings .users-sections .admin-only .app-svg .slider, body .dashboard .main .settings .users-sections .admin-only .email-svg .slider, body .dashboard .main .settings .users-sections .admin-only .sound-svg .slider, body .dashboard .main .settings .users-sections .admin-only .all-svg .slider, body .dashboard .main .settings .users-sections .admin-only .adm-svg .slider, body .dashboard .main .settings .users-sections .admin-only .std-svg .slider, body .dashboard .main .settings .users-sections .admin-only .screen-svg .slider, body .dashboard .main .settings .users-sections .std-only .app-svg .slider, body .dashboard .main .settings .users-sections .std-only .email-svg .slider, body .dashboard .main .settings .users-sections .std-only .sound-svg .slider, body .dashboard .main .settings .users-sections .std-only .all-svg .slider, body .dashboard .main .settings .users-sections .std-only .adm-svg .slider, body .dashboard .main .settings .users-sections .std-only .std-svg .slider, body .dashboard .main .settings .users-sections .std-only .screen-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .app-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .email-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .sound-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .all-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .adm-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .std-svg .slider, body .dashboard .main .settings .users-sections .screen-pop .screen-svg .slider, body .dashboard .main .settings .admin-announce .in-app .app-svg .slider, body .dashboard .main .settings .admin-announce .in-app .email-svg .slider, body .dashboard .main .settings .admin-announce .in-app .sound-svg .slider, body .dashboard .main .settings .admin-announce .in-app .all-svg .slider, body .dashboard .main .settings .admin-announce .in-app .adm-svg .slider, body .dashboard .main .settings .admin-announce .in-app .std-svg .slider, body .dashboard .main .settings .admin-announce .in-app .screen-svg .slider, body .dashboard .main .settings .admin-announce .email .app-svg .slider, body .dashboard .main .settings .admin-announce .email .email-svg .slider, body .dashboard .main .settings .admin-announce .email .sound-svg .slider, body .dashboard .main .settings .admin-announce .email .all-svg .slider, body .dashboard .main .settings .admin-announce .email .adm-svg .slider, body .dashboard .main .settings .admin-announce .email .std-svg .slider, body .dashboard .main .settings .admin-announce .email .screen-svg .slider, body .dashboard .main .settings .admin-announce .sound .app-svg .slider, body .dashboard .main .settings .admin-announce .sound .email-svg .slider, body .dashboard .main .settings .admin-announce .sound .sound-svg .slider, body .dashboard .main .settings .admin-announce .sound .all-svg .slider, body .dashboard .main .settings .admin-announce .sound .adm-svg .slider, body .dashboard .main .settings .admin-announce .sound .std-svg .slider, body .dashboard .main .settings .admin-announce .sound .screen-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .app-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .email-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .sound-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .all-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .adm-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .std-svg .slider, body .dashboard .main .settings .admin-announce .announce-all .screen-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .app-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .email-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .sound-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .all-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .adm-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .std-svg .slider, body .dashboard .main .settings .admin-announce .admin-only .screen-svg .slider, body .dashboard .main .settings .admin-announce .std-only .app-svg .slider, body .dashboard .main .settings .admin-announce .std-only .email-svg .slider, body .dashboard .main .settings .admin-announce .std-only .sound-svg .slider, body .dashboard .main .settings .admin-announce .std-only .all-svg .slider, body .dashboard .main .settings .admin-announce .std-only .adm-svg .slider, body .dashboard .main .settings .admin-announce .std-only .std-svg .slider, body .dashboard .main .settings .admin-announce .std-only .screen-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .app-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .email-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .all-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .std-svg .slider, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg .slider, body .dashboard .main .settings .screen-sections .in-app .app-svg .slider, body .dashboard .main .settings .screen-sections .in-app .email-svg .slider, body .dashboard .main .settings .screen-sections .in-app .sound-svg .slider, body .dashboard .main .settings .screen-sections .in-app .all-svg .slider, body .dashboard .main .settings .screen-sections .in-app .adm-svg .slider, body .dashboard .main .settings .screen-sections .in-app .std-svg .slider, body .dashboard .main .settings .screen-sections .in-app .screen-svg .slider, body .dashboard .main .settings .screen-sections .email .app-svg .slider, body .dashboard .main .settings .screen-sections .email .email-svg .slider, body .dashboard .main .settings .screen-sections .email .sound-svg .slider, body .dashboard .main .settings .screen-sections .email .all-svg .slider, body .dashboard .main .settings .screen-sections .email .adm-svg .slider, body .dashboard .main .settings .screen-sections .email .std-svg .slider, body .dashboard .main .settings .screen-sections .email .screen-svg .slider, body .dashboard .main .settings .screen-sections .sound .app-svg .slider, body .dashboard .main .settings .screen-sections .sound .email-svg .slider, body .dashboard .main .settings .screen-sections .sound .sound-svg .slider, body .dashboard .main .settings .screen-sections .sound .all-svg .slider, body .dashboard .main .settings .screen-sections .sound .adm-svg .slider, body .dashboard .main .settings .screen-sections .sound .std-svg .slider, body .dashboard .main .settings .screen-sections .sound .screen-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .app-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .email-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .sound-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .all-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .adm-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .std-svg .slider, body .dashboard .main .settings .screen-sections .announce-all .screen-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .app-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .email-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .sound-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .all-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .adm-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .std-svg .slider, body .dashboard .main .settings .screen-sections .admin-only .screen-svg .slider, body .dashboard .main .settings .screen-sections .std-only .app-svg .slider, body .dashboard .main .settings .screen-sections .std-only .email-svg .slider, body .dashboard .main .settings .screen-sections .std-only .sound-svg .slider, body .dashboard .main .settings .screen-sections .std-only .all-svg .slider, body .dashboard .main .settings .screen-sections .std-only .adm-svg .slider, body .dashboard .main .settings .screen-sections .std-only .std-svg .slider, body .dashboard .main .settings .screen-sections .std-only .screen-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .app-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .email-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .all-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .std-svg .slider, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg .slider:before, body .dashboard .main .settings .users-sections .in-app .email-svg .slider:before, body .dashboard .main .settings .users-sections .in-app .sound-svg .slider:before, body .dashboard .main .settings .users-sections .in-app .all-svg .slider:before, body .dashboard .main .settings .users-sections .in-app .adm-svg .slider:before, body .dashboard .main .settings .users-sections .in-app .std-svg .slider:before, body .dashboard .main .settings .users-sections .in-app .screen-svg .slider:before, body .dashboard .main .settings .users-sections .email .app-svg .slider:before, body .dashboard .main .settings .users-sections .email .email-svg .slider:before, body .dashboard .main .settings .users-sections .email .sound-svg .slider:before, body .dashboard .main .settings .users-sections .email .all-svg .slider:before, body .dashboard .main .settings .users-sections .email .adm-svg .slider:before, body .dashboard .main .settings .users-sections .email .std-svg .slider:before, body .dashboard .main .settings .users-sections .email .screen-svg .slider:before, body .dashboard .main .settings .users-sections .sound .app-svg .slider:before, body .dashboard .main .settings .users-sections .sound .email-svg .slider:before, body .dashboard .main .settings .users-sections .sound .sound-svg .slider:before, body .dashboard .main .settings .users-sections .sound .all-svg .slider:before, body .dashboard .main .settings .users-sections .sound .adm-svg .slider:before, body .dashboard .main .settings .users-sections .sound .std-svg .slider:before, body .dashboard .main .settings .users-sections .sound .screen-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .app-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .email-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .sound-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .all-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .adm-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .std-svg .slider:before, body .dashboard .main .settings .users-sections .announce-all .screen-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .app-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .email-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .sound-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .all-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .adm-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .std-svg .slider:before, body .dashboard .main .settings .users-sections .admin-only .screen-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .app-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .email-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .sound-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .all-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .adm-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .std-svg .slider:before, body .dashboard .main .settings .users-sections .std-only .screen-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .app-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .email-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .sound-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .all-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .adm-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .std-svg .slider:before, body .dashboard .main .settings .users-sections .screen-pop .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .app-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .email-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .all-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .std-svg .slider:before, body .dashboard .main .settings .admin-announce .in-app .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .email .app-svg .slider:before, body .dashboard .main .settings .admin-announce .email .email-svg .slider:before, body .dashboard .main .settings .admin-announce .email .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .email .all-svg .slider:before, body .dashboard .main .settings .admin-announce .email .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .email .std-svg .slider:before, body .dashboard .main .settings .admin-announce .email .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .app-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .email-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .all-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .std-svg .slider:before, body .dashboard .main .settings .admin-announce .sound .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .app-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .email-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .all-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .std-svg .slider:before, body .dashboard .main .settings .admin-announce .announce-all .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .app-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .email-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .all-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .std-svg .slider:before, body .dashboard .main .settings .admin-announce .admin-only .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .app-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .email-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .all-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .std-svg .slider:before, body .dashboard .main .settings .admin-announce .std-only .screen-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .app-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .email-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .all-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .std-svg .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .app-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .email-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .all-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .std-svg .slider:before, body .dashboard .main .settings .screen-sections .in-app .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .email .app-svg .slider:before, body .dashboard .main .settings .screen-sections .email .email-svg .slider:before, body .dashboard .main .settings .screen-sections .email .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .email .all-svg .slider:before, body .dashboard .main .settings .screen-sections .email .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .email .std-svg .slider:before, body .dashboard .main .settings .screen-sections .email .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .app-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .email-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .all-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .std-svg .slider:before, body .dashboard .main .settings .screen-sections .sound .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .app-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .email-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .all-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .std-svg .slider:before, body .dashboard .main .settings .screen-sections .announce-all .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .app-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .email-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .all-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .std-svg .slider:before, body .dashboard .main .settings .screen-sections .admin-only .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .app-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .email-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .all-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .std-svg .slider:before, body .dashboard .main .settings .screen-sections .std-only .screen-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .app-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .email-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .all-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .std-svg .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .in-app .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .in-app .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .in-app .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .in-app .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .in-app .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .in-app .screen-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .email .screen-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .sound .screen-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .announce-all .screen-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .admin-only .screen-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .std-only .screen-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .app-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .email-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .sound-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .all-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .adm-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .std-svg input:checked + .slider, body .dashboard .main .settings .users-sections .screen-pop .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .in-app .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .email .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .sound .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .announce-all .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .admin-only .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .std-only .screen-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .app-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .email-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .all-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .std-svg input:checked + .slider, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .in-app .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .email .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .sound .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .announce-all .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .admin-only .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .std-only .screen-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .app-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .email-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .all-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .std-svg input:checked + .slider, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg input:checked + .slider {
+  background-color: #2196F3;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .in-app .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .in-app .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .in-app .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .in-app .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .in-app .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .in-app .screen-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .email .screen-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .sound .screen-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .announce-all .screen-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .admin-only .screen-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .std-only .screen-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .app-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .email-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .sound-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .all-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .adm-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .std-svg input:focus + .slider, body .dashboard .main .settings .users-sections .screen-pop .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .in-app .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .email .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .sound .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .announce-all .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .admin-only .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .std-only .screen-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .app-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .email-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .all-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .std-svg input:focus + .slider, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .in-app .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .email .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .sound .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .announce-all .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .admin-only .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .std-only .screen-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .app-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .email-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .all-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .std-svg input:focus + .slider, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .in-app .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .in-app .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .in-app .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .in-app .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .in-app .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .in-app .screen-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .email .screen-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .sound .screen-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .announce-all .screen-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .admin-only .screen-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .std-only .screen-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .app-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .email-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .sound-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .all-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .adm-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .std-svg input:checked + .slider:before, body .dashboard .main .settings .users-sections .screen-pop .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .in-app .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .email .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .sound .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .announce-all .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .admin-only .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .std-only .screen-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .app-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .email-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .all-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .std-svg input:checked + .slider:before, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .in-app .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .email .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .sound .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .announce-all .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .admin-only .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .std-only .screen-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .app-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .email-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .all-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .std-svg input:checked + .slider:before, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg .slider.round, body .dashboard .main .settings .users-sections .in-app .email-svg .slider.round, body .dashboard .main .settings .users-sections .in-app .sound-svg .slider.round, body .dashboard .main .settings .users-sections .in-app .all-svg .slider.round, body .dashboard .main .settings .users-sections .in-app .adm-svg .slider.round, body .dashboard .main .settings .users-sections .in-app .std-svg .slider.round, body .dashboard .main .settings .users-sections .in-app .screen-svg .slider.round, body .dashboard .main .settings .users-sections .email .app-svg .slider.round, body .dashboard .main .settings .users-sections .email .email-svg .slider.round, body .dashboard .main .settings .users-sections .email .sound-svg .slider.round, body .dashboard .main .settings .users-sections .email .all-svg .slider.round, body .dashboard .main .settings .users-sections .email .adm-svg .slider.round, body .dashboard .main .settings .users-sections .email .std-svg .slider.round, body .dashboard .main .settings .users-sections .email .screen-svg .slider.round, body .dashboard .main .settings .users-sections .sound .app-svg .slider.round, body .dashboard .main .settings .users-sections .sound .email-svg .slider.round, body .dashboard .main .settings .users-sections .sound .sound-svg .slider.round, body .dashboard .main .settings .users-sections .sound .all-svg .slider.round, body .dashboard .main .settings .users-sections .sound .adm-svg .slider.round, body .dashboard .main .settings .users-sections .sound .std-svg .slider.round, body .dashboard .main .settings .users-sections .sound .screen-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .app-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .email-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .sound-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .all-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .adm-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .std-svg .slider.round, body .dashboard .main .settings .users-sections .announce-all .screen-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .app-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .email-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .sound-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .all-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .adm-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .std-svg .slider.round, body .dashboard .main .settings .users-sections .admin-only .screen-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .app-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .email-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .sound-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .all-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .adm-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .std-svg .slider.round, body .dashboard .main .settings .users-sections .std-only .screen-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .app-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .email-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .sound-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .all-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .adm-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .std-svg .slider.round, body .dashboard .main .settings .users-sections .screen-pop .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .app-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .email-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .all-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .std-svg .slider.round, body .dashboard .main .settings .admin-announce .in-app .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .email .app-svg .slider.round, body .dashboard .main .settings .admin-announce .email .email-svg .slider.round, body .dashboard .main .settings .admin-announce .email .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .email .all-svg .slider.round, body .dashboard .main .settings .admin-announce .email .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .email .std-svg .slider.round, body .dashboard .main .settings .admin-announce .email .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .app-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .email-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .all-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .std-svg .slider.round, body .dashboard .main .settings .admin-announce .sound .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .app-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .email-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .all-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .std-svg .slider.round, body .dashboard .main .settings .admin-announce .announce-all .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .app-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .email-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .all-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .std-svg .slider.round, body .dashboard .main .settings .admin-announce .admin-only .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .app-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .email-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .all-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .std-svg .slider.round, body .dashboard .main .settings .admin-announce .std-only .screen-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .app-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .email-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .all-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .std-svg .slider.round, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .app-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .email-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .all-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .std-svg .slider.round, body .dashboard .main .settings .screen-sections .in-app .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .email .app-svg .slider.round, body .dashboard .main .settings .screen-sections .email .email-svg .slider.round, body .dashboard .main .settings .screen-sections .email .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .email .all-svg .slider.round, body .dashboard .main .settings .screen-sections .email .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .email .std-svg .slider.round, body .dashboard .main .settings .screen-sections .email .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .app-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .email-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .all-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .std-svg .slider.round, body .dashboard .main .settings .screen-sections .sound .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .app-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .email-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .all-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .std-svg .slider.round, body .dashboard .main .settings .screen-sections .announce-all .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .app-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .email-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .all-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .std-svg .slider.round, body .dashboard .main .settings .screen-sections .admin-only .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .app-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .email-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .all-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .std-svg .slider.round, body .dashboard .main .settings .screen-sections .std-only .screen-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .app-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .email-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .all-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .std-svg .slider.round, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg .slider.round {
+  border-radius: 34px;
+}
+body .dashboard .main .settings .users-sections .in-app .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .in-app .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .in-app .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .in-app .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .in-app .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .in-app .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .in-app .screen-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .email .screen-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .sound .screen-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .announce-all .screen-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .admin-only .screen-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .std-only .screen-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .app-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .email-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .sound-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .all-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .adm-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .std-svg .slider.round:before, body .dashboard .main .settings .users-sections .screen-pop .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .in-app .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .email .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .sound .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .announce-all .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .admin-only .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .std-only .screen-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .app-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .email-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .sound-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .all-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .adm-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .std-svg .slider.round:before, body .dashboard .main .settings .admin-announce .screen-pop .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .in-app .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .email .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .sound .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .announce-all .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .admin-only .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .std-only .screen-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .app-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .email-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .sound-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .all-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .adm-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .std-svg .slider.round:before, body .dashboard .main .settings .screen-sections .screen-pop .screen-svg .slider.round:before {
+  border-radius: 50%;
+}
+body .dashboard .main .settings .general {
+  padding: 0 1rem;
+}
+body .dashboard .main .settings .general .font p, body .dashboard .main .settings .general .theme p {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .profile {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+body .dashboard .main .profile .profile-upload {
+  padding: 0 1rem 0 0;
+}
+body .dashboard .main .profile .profile-upload h2 {
+  font-family: "Work Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+body .dashboard .main .profile .profile-upload .profile-details {
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 3px 3px #888;
+  border-radius: 20px;
+}
+body .dashboard .main .profile .profile-upload .profile-details .bg-dp {
+  background-color: rgb(19, 0, 19);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 6rem;
+}
+body .dashboard .main .profile .profile-upload .profile-details img {
+  position: sticky;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 5rem;
+  height: 5rem;
+  overflow: auto;
+  padding: 3rem 6rem;
+}
+body .dashboard .main .profile .profile-upload .profile-details .profile-status {
+  padding: 1rem 1rem 2rem 1rem;
+  text-align: left;
+}
+body .dashboard .main .profile .profile-upload .profile-details .profile-status .complete-percent {
+  text-align: center;
+  padding: 0.5rem 0 0 0.35rem;
+}
+body .dashboard .main .profile .profile-upload .profile-details .profile-status .progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  margin-top: 3rem;
+}
+body .dashboard .main .profile .profile-upload .profile-details .profile-status .progress-container .progress-bar {
+  width: 40%;
+  height: 8px;
+  background-color: rgb(128, 0, 128);
+  text-align: center;
+  border-radius: 8px;
+  line-height: 30px;
+  color: white;
+}
+body .dashboard .main .profile .profile-upload .profile-details .profile-status h3 {
+  padding: 0.35rem 0;
+  font-size: 20px;
+}
+body .dashboard .main .profile .profile-upload .profile-details .profile-status h3:nth-child(3) {
+  padding-top: 1rem;
+}
+body .dashboard .main .profile .profile-setup {
+  padding: 0 0 0 1rem;
+}
+body .dashboard .main .profile .profile-setup .user-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem 0;
+}
+body .dashboard .main .profile .profile-setup .user-info .right-line hr, body .dashboard .main .profile .profile-setup .user-info .left-line hr {
+  border: 1px solid rgb(51, 51, 51);
+  margin: 0.5rem;
+}
+body .dashboard .main .profile .profile-setup .user-info .info {
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+body .dashboard .main .profile .profile-setup form .form-group {
+  display: grid;
+}
+body .dashboard .main .profile .profile-setup form .form-group input {
+  padding: 8px 24px;
+  margin: 0.5rem;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  font-family: "Work Sans";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+}
+body .dashboard .main .profile .profile-setup form .form-group button {
+  width: 40%;
+  padding: 8px 24px;
+  border-radius: 8px;
+  gap: 8px;
+  background-color: rgb(128, 0, 128);
+  border: rgb(128, 0, 128);
+  font-family: "Work Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+  float: right;
+  justify-self: right;
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+}
+body .dashboard .main .profile .profile-setup form .change-password {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem 0;
+}
+body .dashboard .main .profile .profile-setup form .change-password .right-line hr, body .dashboard .main .profile .profile-setup form .change-password .left-line hr {
+  border: 1px solid rgb(51, 51, 51);
+  margin: 0.5rem;
+}
+body .dashboard .main .profile .profile-setup form .change-password .password-section {
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+body .dashboard .main .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body .dashboard .main .modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+body .dashboard .main .modal .modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+body .dashboard .main .modal .modal-content .close:hover,
+body .dashboard .main .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .dashboard .main .modal .modal-content .theme {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+body .dashboard .main .modal .modal-content .theme .light, body .dashboard .main .modal .modal-content .theme .dark, body .dashboard .main .modal .modal-content .theme .default {
+  padding: 1rem 0.25rem;
+}
+body .dashboard .main .modal .modal-content .theme .light span, body .dashboard .main .modal .modal-content .theme .dark span, body .dashboard .main .modal .modal-content .theme .default span {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .modal .modal-content .theme .light span input, body .dashboard .main .modal .modal-content .theme .dark span input, body .dashboard .main .modal .modal-content .theme .default span input {
+  padding: 0 0.5rem;
+  color: rgb(128, 0, 128);
+  background-color: rgb(128, 0, 128);
+}
+body .dashboard .main .file-folder {
+  display: flex;
+  flex-direction: row wrap;
+}
+body .dashboard .main .file-folder .add-folder {
+  padding: 0.5rem 1rem 0 0;
+}
+body .dashboard .main .file-folder .add-folder button {
+  display: flex;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+}
+body .dashboard .main .file-folder .add-folder button p {
+  padding: 0.35rem;
+}
+body .dashboard .main .file-folder .add-folder button svg {
+  line-height: 1rem;
+  padding: 0.3rem 0 0 0;
+}
+body .dashboard .main .file-folder .add-file {
+  padding: 0.5rem 0 0 0;
+}
+body .dashboard .main .file-folder .add-file button {
+  display: flex;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin: 0;
+}
+body .dashboard .main .file-folder .add-file button p {
+  padding: 0.35rem;
+  text-align: left;
+}
+body .dashboard .main .file-folder .add-file button svg {
+  line-height: 1rem;
+  padding: 0.25rem 0 0 0;
+}
+body .dashboard .main .add-announcement {
+  padding: 0.5rem 0 0 0;
+}
+body .dashboard .main .add-announcement button {
+  display: flex;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.25rem;
+  border: 1px solid rgb(19, 0, 19);
+  margin: 0;
+}
+body .dashboard .main .add-announcement button p {
+  padding: 0.35rem;
+}
+body .dashboard .main .add-announcement button svg {
+  line-height: 1rem;
+  padding: 0.25rem 0;
+}
+body .dashboard .main .announce {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 2px;
+  padding: 1rem;
+  margin: 1rem 0;
+  height: 60vh;
+}
+body .dashboard .main .announce h2 {
+  font-family: "Work Sans";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0 1rem;
+}
+body .dashboard .main .announcement {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 40% 30% 30%;
+}
+body .dashboard .main .announcement .announcement-title {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body .dashboard .main .announcement .date {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+body .dashboard .main .announcement .see-more {
+  border-radius: 8px;
+  text-align: right;
+  justify-self: right;
+}
+body .dashboard .main .announcement .see-more a {
+  font-family: "Work Sans";
+  font-weight: 400;
+  border: 1px solid rgb(19, 0, 19);
+  border-radius: 8px;
+  text-decoration: none;
+  line-height: 0rem;
+  letter-spacing: 0em;
+  text-align: right;
+  color: black;
+  padding: 0.5rem;
+}
+body .dashboard .main .folder-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body .dashboard .main .folder-list .folder-one {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+body .dashboard .main .folder-list .folder-one .folder-svg {
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+}
+body .dashboard .main .folder-list .folder-one .folder-svg svg {
+  height: 7rem;
+  width: 7rem;
+  color: black;
+  padding: 1rem 0;
+}
+body .dashboard .main .folder-list .folder-one .folder-svg p {
+  background-color: rgb(19, 0, 19);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Work Sans";
+  line-height: 3rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+body .dashboard .main .folder-list .file-one {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg {
+  background-color: rgb(255, 255, 255);
+}
+body .dashboard .main .folder-list .file-one .pdf-svg svg {
+  height: 7rem;
+  width: 7rem;
+  color: black;
+  padding: 1rem 0;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg p {
+  color: rgb(255, 255, 255);
+  background-color: rgb(19, 0, 19);
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg p span {
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Work Sans";
+  line-height: 3rem;
+}
+body .dashboard .main .folder-list .file-one .pdf-svg p svg {
+  width: 24px;
+  height: 24px;
+  justify-self: right;
+  padding: 1.5rem 1.5rem;
+}
+body .dashboard .main .registered-students {
+  padding: 0 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin: 1rem;
+}
+body .dashboard .main .registered-students h2 {
+  padding: 1rem 0;
+}
+body .dashboard .main .registered-students .student-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5rem;
+  font-size: 18px;
+}
+body .dashboard .main .registered-students .student-data .username {
+  display: flex;
+}
+body .dashboard .main .registered-students .student-data .username .dp img {
+  height: 45px;
+  width: 45px;
+}
+body .dashboard .main .registered-students .student-data .username .name {
+  padding: 1rem 0;
+}
+body .dashboard .main .registered-students .student-data .reg-no {
+  justify-self: right;
+  padding: 1rem 0;
+}
+body .dashboard .main .registered-students .student-data .see-more {
+  justify-self: right;
+  text-align: right;
+  float: right;
+  border-radius: 8px;
+  padding-top: 1rem;
+}
+body .dashboard .main .registered-students .student-data .see-more a {
+  border: 1px solid black;
+  text-decoration: none;
+  border-radius: 8px;
+  color: black;
+  padding: 0.5rem;
+}
+body .dashboard .main .registered-students .folder-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body .dashboard .main .registered-students .folder-list .folder-one {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+body .dashboard .main .registered-students .folder-list .folder-one .folder-svg {
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+}
+body .dashboard .main .registered-students .folder-list .folder-one .folder-svg svg {
+  height: 7rem;
+  width: 7rem;
+  color: black;
+  padding: 1rem 0;
+}
+body .dashboard .main .registered-students .folder-list .folder-one .folder-svg p {
+  background-color: rgb(19, 0, 19);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Work Sans";
+  line-height: 3rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+body .dashboard .main .registered-students .folder-list .file-one {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+body .dashboard .main .registered-students .folder-list .file-one .pdf-svg {
+  background-color: rgb(255, 255, 255);
+}
+body .dashboard .main .registered-students .folder-list .file-one .pdf-svg svg {
+  height: 7rem;
+  width: 7rem;
+  color: black;
+  padding: 1rem 0;
+}
+body .dashboard .main .registered-students .folder-list .file-one .pdf-svg p {
+  color: rgb(255, 255, 255);
+  background-color: rgb(19, 0, 19);
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+body .dashboard .main .registered-students .folder-list .file-one .pdf-svg p span {
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Work Sans";
+  line-height: 3rem;
+}
+body .dashboard .main .registered-students .folder-list .file-one .pdf-svg p svg {
+  width: 24px;
+  height: 24px;
+  justify-self: right;
+  padding: 1.5rem 1.5rem;
+}
+body .dashboard .main .registered-students footer {
+  display: grid;
+  padding-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  font-size: 18px;
+}
+body .dashboard .main .registered-students footer .site-version {
+  justify-self: right;
+}
+body .dashboard .main .settings-title {
+  padding: 1rem 0;
+}
+body .dashboard .main footer {
+  display: grid;
+  padding-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  font-size: 18px;
+}
+body .dashboard .main footer .site-version {
+  justify-self: right;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  body .dashboard {
+    background-color: rgb(245, 245, 220);
+    display: flex;
+    flex-direction: row wrap;
+    overflow: auto;
+  }
+  body .dashboard .sidebar {
+    display: none;
+    background-color: rgb(19, 0, 19);
+    border-top-right-radius: 16px;
+    padding: 1rem;
+    transition: transform 0.5s ease;
+    position: relative;
+    flex: 1;
+    z-index: 1;
+  }
+  body .dashboard .sidebar .logo-name {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 1rem;
+  }
+  body .dashboard .sidebar .logo-name h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Work Sans";
+    margin-top: 2rem;
+  }
+  body .dashboard .sidebar .logo-name img {
+    height: 80px;
+    width: 80px;
+  }
+  body .dashboard .sidebar .sidebar-content ul {
+    padding-top: 1rem;
+  }
+  body .dashboard .sidebar .sidebar-content ul li {
+    margin-top: 2rem;
+    display: flex;
+  }
+  body .dashboard .sidebar .sidebar-content ul li svg {
+    padding: 0 0.5rem;
+  }
+  body .dashboard .sidebar .sidebar-content ul li a {
+    text-decoration: none;
+    font-family: "Work Sans";
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 0 0.5rem;
+    margin-top: 0.25rem;
+  }
+  body .dashboard .sidebar .sidebar-content ul li .dash-link {
+    color: rgb(255, 165, 0);
+  }
+  body .dashboard .sidebar .sidebar-content ul li:hover {
+    border-left: 2px solid rgb(255, 255, 255);
+  }
+  body .dashboard .sidebar .sidebar-content ul li:active {
+    color: yellow;
+  }
+  body .dashboard .main {
+    background-color: rgb(245, 245, 220);
+    transition: transform 0.1s ease;
+    width: 100%;
+    flex: 4;
+  }
+  body .dashboard .main .header {
+    display: flex;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .header .toggle-btn {
+    flex: 0.3;
+    padding: 0;
+    cursor: pointer;
+  }
+  body .dashboard .main .header .toggle-btn svg {
+    cursor: pointer;
+  }
+  body .dashboard .main .header .search-input {
+    flex: 1;
+  }
+  body .dashboard .main .header .search-input input {
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    padding: 0px, 0px, 0px, 15px;
+    gap: 20px;
+    font-family: "Work Sans";
+    font-size: 18px;
+  }
+  body .dashboard .main .header .user-name {
+    font-family: "Work Sans";
+    color: rgb(128, 0, 128);
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    float: center;
+    flex: 2;
+  }
+  body .dashboard .main .header .alert-icon {
+    justify-self: center;
+  }
+  body .dashboard .main .header .alert-icon ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    text-align: right;
+  }
+  body .dashboard .main .header .alert-icon ul li {
+    padding: 5px 10px;
+  }
+  body .dashboard .main .login-name {
+    padding: 0 0.51rem;
+  }
+  body .dashboard .main .login-name p {
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .file-folder {
+    display: flex;
+    flex-direction: row wrap;
+  }
+  body .dashboard .main .file-folder .add-folder {
+    padding: 0.5rem 1rem 0 0;
+  }
+  body .dashboard .main .file-folder .add-folder button {
+    display: flex;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 0.25rem;
+    border: 1px solid rgb(19, 0, 19);
+    margin: 0;
+  }
+  body .dashboard .main .file-folder .add-folder button p {
+    padding: 0.35rem;
+    text-align: left;
+  }
+  body .dashboard .main .file-folder .add-folder button svg {
+    line-height: 1rem;
+    padding: 0.3rem 0 0 0;
+  }
+  body .dashboard .main .file-folder .add-file {
+    padding: 0.5rem 0 0 0;
+  }
+  body .dashboard .main .file-folder .add-file button {
+    display: flex;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid rgb(19, 0, 19);
+    font-weight: 500;
+    padding: 0.25rem;
+    margin: 0;
+  }
+  body .dashboard .main .file-folder .add-file button p {
+    padding: 0.35rem;
+  }
+  body .dashboard .main .file-folder .add-file button svg {
+    line-height: 1rem;
+    padding: 0.25rem 0 0 0;
+  }
+  body .dashboard .main .folder-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .dashboard .main .folder-list .folder-one {
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+  body .dashboard .main .folder-list .folder-one .folder-svg {
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+  }
+  body .dashboard .main .folder-list .folder-one .folder-svg svg {
+    height: 7rem;
+    width: 7rem;
+    color: black;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .folder-list .folder-one .folder-svg p {
+    background-color: rgb(19, 0, 19);
+    color: rgb(255, 255, 255);
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Work Sans";
+    line-height: 3rem;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+  body .dashboard .main .folder-list .file-one {
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  body .dashboard .main .folder-list .file-one .pdf-svg {
+    background-color: rgb(255, 255, 255);
+  }
+  body .dashboard .main .folder-list .file-one .pdf-svg svg {
+    height: 7rem;
+    width: 7rem;
+    color: black;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .folder-list .file-one .pdf-svg p {
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 0, 19);
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+  body .dashboard .main .folder-list .file-one .pdf-svg p span {
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Work Sans";
+    line-height: 3rem;
+  }
+  body .dashboard .main .folder-list .file-one .pdf-svg p svg {
+    width: 24px;
+    height: 24px;
+    justify-self: right;
+    padding: 1.5rem 1.5rem;
+  }
+  body .dashboard .main .add-announcement {
+    padding: 0.5rem 0 0 0;
+  }
+  body .dashboard .main .add-announcement button {
+    display: flex;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 0.25rem;
+    border: 1px solid rgb(19, 0, 19);
+    margin: 0;
+  }
+  body .dashboard .main .add-announcement button p {
+    padding: 0.35rem;
+  }
+  body .dashboard .main .add-announcement button svg {
+    line-height: 1rem;
+    padding: 0.25rem 0;
+  }
+  body .dashboard .main .announce {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 2px;
+    padding: 1rem;
+    margin: 1rem 0;
+    height: 60vh;
+  }
+  body .dashboard .main .announce h2 {
+    font-family: "Work Sans";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  body .dashboard .main .announcement {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 40% 30% 30%;
+  }
+  body .dashboard .main .announcement .announcement-title {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  body .dashboard .main .announcement .date {
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  body .dashboard .main .announcement .see-more {
+    border-radius: 8px;
+    text-align: right;
+    justify-self: right;
+  }
+  body .dashboard .main .announcement .see-more a {
+    font-family: "Work Sans";
+    font-weight: 400;
+    border: 1px solid rgb(19, 0, 19);
+    border-radius: 8px;
+    text-decoration: none;
+    line-height: 0rem;
+    letter-spacing: 0em;
+    text-align: right;
+    color: black;
+    padding: 0.5rem;
+  }
+  body .dashboard .main .profile {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  body .dashboard .main .profile .profile-upload {
+    padding: 1rem 0;
+  }
+  body .dashboard .main .profile .profile-upload h2 {
+    font-family: "Work Sans";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  body .dashboard .main .profile .profile-upload .profile-details {
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 3px 3px #888;
+    border-radius: 20px;
+    display: block;
+  }
+  body .dashboard .main .profile .profile-upload .profile-details .bg-dp {
+    background-color: rgb(19, 0, 19);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 6rem;
+  }
+  body .dashboard .main .profile .profile-upload .profile-details img {
+    position: sticky;
+    z-index: 1;
+    left: 12rem;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    overflow: auto;
+    padding: 3rem 1rem;
+  }
+  body .dashboard .main .profile .profile-upload .profile-details .profile-status p {
+    text-align: center;
+    padding: 0 0 0 0.35rem;
+  }
+  body .dashboard .main .profile .profile-upload .profile-details .profile-status h3 {
+    text-align: center;
+    padding: 0.75rem 0;
+    font-size: 24px;
+  }
+  body .dashboard .main .profile .profile-setup {
+    padding: 0;
+  }
+  body .dashboard .main .profile .profile-setup .user-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .profile .profile-setup .user-info .right-line hr, body .dashboard .main .profile .profile-setup .user-info .left-line hr {
+    border: 1px solid rgb(51, 51, 51);
+    margin: 0.5rem;
+  }
+  body .dashboard .main .profile .profile-setup .user-info .info {
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  body .dashboard .main .profile .profile-setup form .form-group {
+    display: grid;
+  }
+  body .dashboard .main .profile .profile-setup form .form-group input {
+    padding: 8px 24px;
+    margin: 0.5rem;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    font-family: "Work Sans";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+  }
+  body .dashboard .main .profile .profile-setup form .form-group button {
+    width: 50%;
+    padding: 8px 24px;
+    border-radius: 8px;
+    gap: 8px;
+    background-color: rgb(128, 0, 128);
+    border: rgb(128, 0, 128);
+    font-family: "Work Sans";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+    float: right;
+    justify-self: right;
+    color: rgb(255, 255, 255);
+    margin: 0.5rem 0;
+  }
+  body .dashboard .main .profile .profile-setup form .change-password {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 0;
+  }
+  body .dashboard .main .profile .profile-setup form .change-password .right-line hr, body .dashboard .main .profile .profile-setup form .change-password .left-line hr {
+    border: 1px solid rgb(51, 51, 51);
+    margin: 0.5rem;
+  }
+  body .dashboard .main .profile .profile-setup form .change-password .password-section {
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  body .dashboard .main footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(19, 0, 19);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 1rem 0;
+  }
+  body .dashboard .main footer .copyright {
+    justify-self: center;
+  }
+  body .dashboard .main footer .site-version {
+    text-align: center;
+    justify-self: center;
+    padding: 0.5rem 0;
+  }
+}/*# sourceMappingURL=folders.css.map */

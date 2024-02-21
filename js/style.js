@@ -6,6 +6,14 @@ function openNav(){
         sidebar.style.display = "none";
     }
 }
+function modalNav(){
+    const modal = document.getElementById('myModal');
+    if(modal.style.display === 'none'){
+        modal.style.display = "block";
+    }else{
+        modal.style.display = "none";
+    }
+}
 var modal = document.getElementById("myModal");
 var modalToggle = document.getElementById("modalToggle");
 var span = document.getElementsByClassName("close")[0];
@@ -28,6 +36,7 @@ window.onclick = function(event) {
         modalToggle.checked = false;
     }
 }
+
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 
 radioButtons.forEach(radioButton => {
@@ -56,15 +65,15 @@ function frame() {
 }
 }
 
-$(document).ready(function() {
-    $(".dash-link").click(function() {
-        // Remove the 'active' class from all li elements
-        $("ul li").removeClass("active");
+// $(document).ready(function() {
+//     $(".dash-link").click(function() {
+//         // Remove the 'active' class from all li elements
+//         $("ul li").removeClass("active");
         
-        // Add the 'active' class to the parent li element of the clicked link
-        $(this).parent().addClass("active");
-    });
-});
+//         // Add the 'active' class to the parent li element of the clicked link
+//         $(this).parent().addClass("active");
+//     });
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
     var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
