@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Educator Dashboard || Dashboard Submissions and Grading</title>
+    <title>Educator Dashboard || Dashboard Course and Assignments</title>
 </head>
 <body class="light-theme">
 <div class="dashboard">
@@ -107,111 +107,26 @@
         <div class="login-name">
             <P>Hello Educator. Welcome to your desk.</P>
         </div>
-        <div class="submission-grading">
-            <div class="course-list">
-                <label class="course-radio"><input type="radio" name="all" id="all">All</label>
-                <label class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</label>
-                <label class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</label>
-                <label class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</label>
-                <label class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</label>
+        <div class="announcemnt-post">
+            <div class="redirect-back">
+                <a href="announcements.html"><svg width="14" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 1.375L1.25 7L7.5 12.625" stroke="rgba(128, 0, 128, 1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></a>
             </div>
-            
-            <div class="course-datalist">
-                <div class="datalist-headings">
-                    <h3>NAME</h3>
-                    <h3 class="regno">DATE</h3>
-                    <h3 class="level">COURSE</h3>
-                    <h3 class="enrolled">GRADING STATUS</h3>
-                </div>
-                <div class="data-list">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
-                </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Okoro Jennifer</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-
-                    <div class="enrolled-courses">
-                        MCT 305
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
-                </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>John Chiadikam</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 302
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
-                </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Chukwujekwu Okoh</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
-                    </div>
-                </div>
-                <div class="data-list pt-4">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
-                    </div>
-                </div>
-                <div class="data-list pt-5">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
+            <div class="make-announcements">
+                <div class="announcement-control">
+                    <div class="publish-announcement">
+                        <form method="post" action="">
+                            <textarea class="text-editor" id="message" name="message" placeholder="Your message here..." cols="30" rows="10"></textarea><br>
+                            <div class="form-control">
+                            <button name="submit" type="submit">Publish</button>
+                            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5003 9.99935H1.69906C0.852921 9.99935 0.166992 9.31342 0.166992 8.46728C0.166992 8.06096 0.328405 7.67127 0.615723 7.38395L2.78482 5.21485C3.27868 4.721 4.07334 4.70209 4.59012 5.17189C5.10164 5.63691 5.88665 5.62376 6.3823 5.14187L10.322 1.31156C10.9755 0.676302 12.018 0.683642 12.6624 1.32804L15.6788 4.34453C15.9914 4.65709 16.167 5.08101 16.167 5.52304V8.33268C16.167 9.25316 15.4208 9.99935 14.5003 9.99935Z" fill="#B2B9C4"/>
+                            </svg>                            
+                            <input type="file" name="file" id="file">
+                        </div>
+                        </form>
+                        
                     </div>
                 </div>
             </div>
@@ -227,21 +142,60 @@
     </section>
 </div>
 <script src="js/style.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script>
-    
-document.addEventListener("DOMContentLoaded", function () {
-    var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
-    
-    radioButtons.forEach(function (radioButton) {
-        radioButton.addEventListener('click', function () {
-            radioButtons.forEach(function (rb) {
-                if (rb !== radioButton) {
-                    rb.checked = false;
+    // Initialize CKEditor
+    ClassicEditor
+        // .create(document.querySelector('#message'))
+        .create(document.querySelector('#message'), {
+            editor: {
+                ui: {
+                    view: {
+                        height: '500px' // Set the height here
+                    }
                 }
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+        
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener('click', function () {
+                radioButtons.forEach(function (rb) {
+                    if (rb !== radioButton) {
+                        rb.checked = false;
+                    }
+                });
             });
         });
     });
-});
-</script>
+    var modal = document.getElementById("myModal");
+    var modalToggle = document.getElementById("modalToggle");
+    var span = document.getElementsByClassName("close")[0];
+
+    modalToggle.addEventListener("click", function() {
+        if (modalToggle.checked) {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    });
+
+    span.onclick = function() {
+        modalToggle.checked = false;
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalToggle.checked = false;
+        }
+    };
+
+    </script>
 </body>
 </html>

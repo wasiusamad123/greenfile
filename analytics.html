@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Educator Dashboard || Dashboard Submissions and Grading</title>
+    <title>Educator Dashboard || Dashboard Analytics Page</title>
 </head>
 <body class="light-theme">
 <div class="dashboard">
@@ -107,115 +107,6 @@
         <div class="login-name">
             <P>Hello Educator. Welcome to your desk.</P>
         </div>
-        <div class="submission-grading">
-            <div class="course-list">
-                <label class="course-radio"><input type="radio" name="all" id="all">All</label>
-                <label class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</label>
-                <label class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</label>
-                <label class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</label>
-                <label class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</label>
-            </div>
-            
-            <div class="course-datalist">
-                <div class="datalist-headings">
-                    <h3>NAME</h3>
-                    <h3 class="regno">DATE</h3>
-                    <h3 class="level">COURSE</h3>
-                    <h3 class="enrolled">GRADING STATUS</h3>
-                </div>
-                <div class="data-list">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
-                </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Okoro Jennifer</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-
-                    <div class="enrolled-courses">
-                        MCT 305
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
-                </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>John Chiadikam</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 302
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
-                </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Chukwujekwu Okoh</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
-                    </div>
-                </div>
-                <div class="data-list pt-4">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
-                    </div>
-                </div>
-                <div class="data-list pt-5">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <footer>
             <div class="copyright">
                 <p>&copy; Copyright 2024 || All Right Reserved</p>
@@ -227,21 +118,60 @@
     </section>
 </div>
 <script src="js/style.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script>
-    
-document.addEventListener("DOMContentLoaded", function () {
-    var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
-    
-    radioButtons.forEach(function (radioButton) {
-        radioButton.addEventListener('click', function () {
-            radioButtons.forEach(function (rb) {
-                if (rb !== radioButton) {
-                    rb.checked = false;
+    // Initialize CKEditor
+    ClassicEditor
+        // .create(document.querySelector('#message'))
+        .create(document.querySelector('#message'), {
+            editor: {
+                ui: {
+                    view: {
+                        height: '500px' // Set the height here
+                    }
                 }
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+        
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener('click', function () {
+                radioButtons.forEach(function (rb) {
+                    if (rb !== radioButton) {
+                        rb.checked = false;
+                    }
+                });
             });
         });
     });
-});
-</script>
+    var modal = document.getElementById("myModal");
+    var modalToggle = document.getElementById("modalToggle");
+    var span = document.getElementsByClassName("close")[0];
+
+    modalToggle.addEventListener("click", function() {
+        if (modalToggle.checked) {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    });
+
+    span.onclick = function() {
+        modalToggle.checked = false;
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalToggle.checked = false;
+        }
+    };
+
+    </script>
 </body>
 </html>

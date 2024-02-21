@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Educator Dashboard || Dashboard Submissions and Grading</title>
+    <title>Educator Dashboard || Dashboard Settings</title>
 </head>
 <body class="light-theme">
 <div class="dashboard">
@@ -107,111 +107,174 @@
         <div class="login-name">
             <P>Hello Educator. Welcome to your desk.</P>
         </div>
-        <div class="submission-grading">
-            <div class="course-list">
-                <label class="course-radio"><input type="radio" name="all" id="all">All</label>
-                <label class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</label>
-                <label class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</label>
-                <label class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</label>
-                <label class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</label>
+        <h2 class="settings-title">SETTINGS</h2>
+        <div class="settings">
+            <div class="notification-bell">
+                <div class="svg-toggle">
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.26904 7.74994C2.2678 6.86045 2.44262 5.97951 2.78343 5.1579C3.12424 4.33628 3.6243 3.59025 4.25477 2.9628C4.88525 2.33535 5.63368 1.83889 6.45693 1.50204C7.28017 1.16519 8.16194 0.994607 9.05142 1.00013C12.763 1.02772 15.7317 4.11275 15.7317 7.83468V8.49994C15.7317 11.8577 16.4342 13.8061 17.0529 14.871C17.1196 14.9848 17.1551 15.1142 17.1558 15.246C17.1565 15.3779 17.1224 15.5076 17.0569 15.6221C16.9915 15.7366 16.8971 15.8318 16.7831 15.8982C16.6691 15.9645 16.5397 15.9996 16.4078 15.9999H1.59222C1.46034 15.9996 1.33087 15.9645 1.21689 15.8981C1.1029 15.8318 1.00844 15.7366 0.943012 15.622C0.877587 15.5075 0.843521 15.3778 0.84425 15.2459C0.844978 15.114 0.880476 14.9846 0.947161 14.8709C1.56622 13.8059 2.26904 11.8575 2.26904 8.49994L2.26904 7.74994Z" stroke="#800080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </div>
+                <div class="notify-text">
+                <p>Notifications</p>
             </div>
-            
-            <div class="course-datalist">
-                <div class="datalist-headings">
-                    <h3>NAME</h3>
-                    <h3 class="regno">DATE</h3>
-                    <h3 class="level">COURSE</h3>
-                    <h3 class="enrolled">GRADING STATUS</h3>
+            </div>
+            <div class="users-sections">
+                <div class="in-app">
+                    <div class="app-text">
+                    <p>In App</p>
                 </div>
-                <div class="data-list">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
+                <div class="app-svg">
+                    <label class="switch" for="modalToggle">
+                        <input type="checkbox" id="modalToggle">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Okoro Jennifer</p>
+                </div>
+                <div class="email">
+                    <div class="email-text">
+                        <p>E-mail</p>
                     </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-
-                    <div class="enrolled-courses">
-                        MCT 305
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
+                    <div class="email-svg">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                 </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>John Chiadikam</p>
+                <div class="sound">
+                    <div class="sound-text">
+                        <p>Sound</p>
                     </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 302
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
+                    <div class="sound-svg">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                 </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Chukwujekwu Okoh</p>
+            </div>
+                <div class="announcements">
+                    <div class="announce-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.25 7.5V19.0986C14.25 19.2221 14.2805 19.3436 14.3387 19.4525C14.397 19.5614 14.4812 19.6542 14.584 19.7226L15.6145 20.4097C15.7145 20.4763 15.829 20.518 15.9485 20.5311C16.068 20.5443 16.1889 20.5285 16.301 20.4852C16.4131 20.4418 16.5131 20.3722 16.5927 20.2821C16.6722 20.192 16.729 20.0841 16.7581 19.9675L18 15" stroke="#800080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 14.9999C18.9946 14.9999 19.9484 14.6048 20.6517 13.9015C21.3549 13.1983 21.75 12.2444 21.75 11.2499C21.75 10.2553 21.3549 9.30147 20.6517 8.59821C19.9484 7.89495 18.9946 7.49986 18 7.49986H14.25C14.25 7.49986 9.14515 7.49986 4.23271 3.37977C4.12346 3.28782 3.99022 3.22897 3.84866 3.21015C3.70711 3.19134 3.56312 3.21333 3.43364 3.27355C3.30416 3.33377 3.19456 3.42971 3.11774 3.55009C3.04092 3.67046 3.00007 3.81027 3 3.95308V18.5466C3.00007 18.6894 3.04092 18.8293 3.11774 18.9496C3.19456 19.07 3.30416 19.166 3.43364 19.2262C3.56312 19.2864 3.70711 19.3084 3.84866 19.2896C3.99022 19.2708 4.12346 19.2119 4.23271 19.12C9.14515 14.9999 14.25 14.9999 14.25 14.9999H18Z" stroke="#800080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
                     </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
+                    <div class="announce-title">
+                        <p>Announcements</p>
                     </div>
                 </div>
-                <div class="data-list pt-4">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
+            <div class="admin-announce">
+                <div class="announce-all">
+                    <div class="to-all">
+                        <p>To all</p>
                     </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
+                    <div class="all-svg">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
                     </div>
                 </div>
-                <div class="data-list pt-5">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
+                <div class="admin-only">
+                    <div class="adm-only">
+                        <p>Administrators only</p>
                     </div>
-                    <div class="date">
-                        24/01/2024
+                    <div class="adm-svg">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
                     </div>
-                    <div class="enrolled-courses">
-                        MCT 202
+                </div>
+                <div class="std-only">
+                    <div class="std-text">
+                        <p>Students only</p>
                     </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
+                    <div class="std-svg">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+                <div class="comm-section">
+                    <dvi class="comm-svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.19421 13.1954C2.35557 11.7816 2.06187 10.1104 2.36826 8.49539C2.67466 6.88042 3.56007 5.43285 4.85823 4.4245C6.15639 3.41614 7.77801 2.91638 9.41858 3.01904C11.0591 3.1217 12.6058 3.81973 13.7681 4.98206C14.9305 6.14438 15.6285 7.69104 15.7312 9.33161C15.8338 10.9722 15.3341 12.5938 14.3257 13.892C13.3174 15.1901 11.8698 16.0756 10.2549 16.382C8.63989 16.6884 6.96862 16.3947 5.55486 15.556L5.55488 15.556L3.22356 16.2221C3.1271 16.2496 3.02504 16.2509 2.92793 16.2257C2.83082 16.2005 2.74221 16.1499 2.67128 16.0789C2.60035 16.008 2.54967 15.9194 2.52451 15.8223C2.49935 15.7252 2.50061 15.6231 2.52817 15.5267L3.19426 13.1953L3.19421 13.1954Z" stroke="#800080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.63037 16.4898C8.96219 17.4318 9.4988 18.2885 10.2015 18.9981C10.9043 19.7078 11.7557 20.2528 12.6944 20.5938C13.6331 20.9349 14.6357 21.0635 15.6301 20.9705C16.6245 20.8774 17.5859 20.565 18.445 20.0557L18.445 20.0556L20.7763 20.7217C20.8727 20.7492 20.9748 20.7505 21.0719 20.7253C21.169 20.7002 21.2576 20.6495 21.3286 20.5786C21.3995 20.5076 21.4502 20.419 21.4753 20.3219C21.5005 20.2248 21.4992 20.1228 21.4717 20.0263L20.8056 17.695L20.8056 17.695C21.3975 16.6969 21.7221 15.5631 21.7481 14.403C21.7742 13.2429 21.5008 12.0957 20.9544 11.072C20.408 10.0483 19.607 9.18275 18.6286 8.55879C17.6503 7.93482 16.5276 7.57353 15.369 7.50977" stroke="#800080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </dvi>
+                    <div class="comm-title">
+                        <p>Communications</p>
+                    </div>
+                </div>
+            <div class="screen-sections">
+                <div class="screen-pop">
+                    <div class="screen-text">
+                        <p>Pop on screen</p>
+                    </div>
+                    <div class="screen-svg">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+                <div class="general-settings">
+                    <div class="general-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.90334 8.58739C5.07209 8.23114 5.26897 7.89364 5.49397 7.56551L5.45647 5.12801C5.45647 4.90301 5.55022 4.68739 5.72834 4.53739C6.60022 3.80614 7.59397 3.21551 8.69084 2.82176C8.90647 2.74676 9.14084 2.76551 9.32834 2.88739L11.419 4.14364C11.8127 4.11551 12.2065 4.11551 12.6002 4.14364L14.6908 2.88739C14.8877 2.77489 15.1221 2.74676 15.3377 2.82176C16.4065 3.20614 17.4096 3.77801 18.3002 4.52801C18.469 4.66864 18.5721 4.89364 18.5627 5.11864L18.5252 7.55614C18.7502 7.88426 18.9471 8.22176 19.1158 8.57801L21.244 9.75926C21.4408 9.87176 21.5815 10.0593 21.619 10.2843C21.8158 11.3999 21.8252 12.5624 21.619 13.6968C21.5815 13.9218 21.4408 14.1093 21.244 14.2218L19.1158 15.403C18.9471 15.7593 18.7502 16.0968 18.5252 16.4249L18.5627 18.8624C18.5627 19.0874 18.469 19.303 18.2908 19.453C17.419 20.1843 16.4252 20.7749 15.3283 21.1686C15.1127 21.2436 14.8783 21.2249 14.6908 21.103L12.6002 19.8468C12.2065 19.8749 11.8127 19.8749 11.419 19.8468L9.32834 21.103C9.13147 21.2155 8.89709 21.2436 8.68147 21.1686C7.61272 20.7843 6.60959 20.2124 5.71897 19.4624C5.55022 19.3218 5.44709 19.0968 5.45647 18.8718L5.49397 16.4343C5.26897 16.1061 5.07209 15.7686 4.90334 15.4124L2.77522 14.2311C2.57834 14.1186 2.43772 13.9311 2.40022 13.7061C2.20334 12.5905 2.19397 11.428 2.40022 10.2936C2.43772 10.0686 2.57834 9.88114 2.77522 9.76864L4.90334 8.58739Z" stroke="#800080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5 9.51472 14.4853 7.5 12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5Z" stroke="#800080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="general-text">
+                        <p>General</p>
+                    </div>
+                </div>
+            <div class="general">
+                <div class="font">
+                    <p>Font</p>
+                </div>
+                <div class="theme">
+                    <p>Theme</p>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Choose theme</h3>
+                <div class="theme">
+                    <div class="light">
+                        <input type="radio" name="theme" id="light" onchange="changeTheme('light')">
+                        <label for="light">Light</label>
+                    </div>
+                    <div class="dark">
+                        <input type="radio" name="theme" id="dark" onchange="changeTheme('dark')">
+                        <label for="dark">Dark</label>
+                    </div>
+                    <div class="default">
+                        <input type="radio" name="theme" id="default" checked>
+                        <label for="default">Default</label>
+                    </div>
+                </div>
+                <div class="font">
+                    <div class="small">
+                        <input type="radio" name="font" id="small">
+                        <label for="small">small</label>
+                    </div>
+                    <div class="medium">
+                        <input type="radio" name="font" id="medium">
+                        <label for="medium">Medium</label>
+                    </div>
+                    <div class="large">
+                        <input type="radio" name="font" id="large" checked>
+                        <label for="large">Large</label>
                     </div>
                 </div>
             </div>
@@ -227,21 +290,60 @@
     </section>
 </div>
 <script src="js/style.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script>
-    
-document.addEventListener("DOMContentLoaded", function () {
-    var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
-    
-    radioButtons.forEach(function (radioButton) {
-        radioButton.addEventListener('click', function () {
-            radioButtons.forEach(function (rb) {
-                if (rb !== radioButton) {
-                    rb.checked = false;
+    // Initialize CKEditor
+    ClassicEditor
+        // .create(document.querySelector('#message'))
+        .create(document.querySelector('#message'), {
+            editor: {
+                ui: {
+                    view: {
+                        height: '500px' // Set the height here
+                    }
                 }
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+        
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener('click', function () {
+                radioButtons.forEach(function (rb) {
+                    if (rb !== radioButton) {
+                        rb.checked = false;
+                    }
+                });
             });
         });
     });
-});
-</script>
+    var modal = document.getElementById("myModal");
+    var modalToggle = document.getElementById("modalToggle");
+    var span = document.getElementsByClassName("close")[0];
+
+    modalToggle.addEventListener("click", function() {
+        if (modalToggle.checked) {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    });
+
+    span.onclick = function() {
+        modalToggle.checked = false;
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalToggle.checked = false;
+        }
+    };
+
+    </script>
 </body>
 </html>

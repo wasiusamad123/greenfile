@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Educator Dashboard || Dashboard Submissions and Grading</title>
+    <title>Educator Dashboard || Dashboard Course and Assignments</title>
 </head>
 <body class="light-theme">
 <div class="dashboard">
@@ -107,111 +107,158 @@
         <div class="login-name">
             <P>Hello Educator. Welcome to your desk.</P>
         </div>
-        <div class="submission-grading">
-            <div class="course-list">
-                <label class="course-radio"><input type="radio" name="all" id="all">All</label>
-                <label class="course-radio"><input type="radio" name="mct322" id="mct322">MCT 322</label>
-                <label class="course-radio"><input type="radio" name="mct305" id="mct305">MCT 305</label>
-                <label class="course-radio"><input type="radio" name="mct325" id="mct325">MCT 325</label>
-                <label class="course-radio"><input type="radio" name="mct311" id="mct311">MCT 311</label>
+        <div class="file-folder">
+            <div class="add-folder">
+                <button><p>New Folder</p> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#1D2026" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M8.25 12H15.75" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 8.25V15.75" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
             </div>
-            
-            <div class="course-datalist">
-                <div class="datalist-headings">
-                    <h3>NAME</h3>
-                    <h3 class="regno">DATE</h3>
-                    <h3 class="level">COURSE</h3>
-                    <h3 class="enrolled">GRADING STATUS</h3>
+            <div class="add-file">
+                <button><p>Upload File</p> <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5625 7.68647L12.5 3.75L16.4375 7.68647" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.5 14.2502V3.75293" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.75 14.25V19.5C20.75 19.6989 20.671 19.8897 20.5303 20.0303C20.3897 20.171 20.1989 20.25 20 20.25H5C4.80109 20.25 4.61032 20.171 4.46967 20.0303C4.32902 19.8897 4.25 19.6989 4.25 19.5V14.25" stroke="#1D2026" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+            </div>
+        </div>
+            <div class="folder-list">
+            <div class="file-one">
+                <div class="pdf-svg">   
+                <svg width="63" height="88" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M62.999 37.7149V25.1436C63.0101 24.7306 62.9314 24.32 62.7682 23.9403C62.6051 23.5605 62.3614 23.2205 62.054 22.9436L40.0043 0.943914C39.727 0.637001 39.3863 0.393765 39.0056 0.230988C38.6249 0.068211 38.2134 -0.0102325 37.7994 0.00106869H6.2999C4.63059 0.00604291 3.03109 0.669875 1.8507 1.84758C0.670324 3.02529 0.00498551 4.62118 0 6.28671V81.7144C0 83.3814 0.663737 84.9802 1.8452 86.159C3.02666 87.3378 4.62906 88 6.2999 88H56.6991V81.7144H6.2999V6.28671H31.4995V25.1436C31.5045 26.8091 32.1698 28.405 33.3502 29.5827C34.5306 30.7605 36.1301 31.4243 37.7994 31.4293H56.6991V37.7149H62.999ZM37.7994 25.1436V7.54383L55.4391 25.1436H37.7994Z" fill="#130013"/>
+                </svg>
+                <p><span>file name</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3.75V14.2472" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></p>
+                    
                 </div>
-                <div class="data-list">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
+            </div>
+                    <div class="file-one">
+                <div class="pdf-svg">   
+                <svg width="63" height="88" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M62.999 37.7149V25.1436C63.0101 24.7306 62.9314 24.32 62.7682 23.9403C62.6051 23.5605 62.3614 23.2205 62.054 22.9436L40.0043 0.943914C39.727 0.637001 39.3863 0.393765 39.0056 0.230988C38.6249 0.068211 38.2134 -0.0102325 37.7994 0.00106869H6.2999C4.63059 0.00604291 3.03109 0.669875 1.8507 1.84758C0.670324 3.02529 0.00498551 4.62118 0 6.28671V81.7144C0 83.3814 0.663737 84.9802 1.8452 86.159C3.02666 87.3378 4.62906 88 6.2999 88H56.6991V81.7144H6.2999V6.28671H31.4995V25.1436C31.5045 26.8091 32.1698 28.405 33.3502 29.5827C34.5306 30.7605 36.1301 31.4243 37.7994 31.4293H56.6991V37.7149H62.999ZM37.7994 25.1436V7.54383L55.4391 25.1436H37.7994Z" fill="#130013"/>
+                </svg>
+                <div>
+                <p><span>file name</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3.75V14.2472" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></p>
                 </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Okoro Jennifer</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-
-                    <div class="enrolled-courses">
-                        MCT 305
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
                 </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>John Chiadikam</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 302
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-graded" href="graded.html">Graded</a>
-                    </div>
+            </div>
+                    <div class="file-one">
+                <div class="pdf-svg">   
+                <svg width="63" height="88" viewBox="0 0 63 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M62.999 37.7149V25.1436C63.0101 24.7306 62.9314 24.32 62.7682 23.9403C62.6051 23.5605 62.3614 23.2205 62.054 22.9436L40.0043 0.943914C39.727 0.637001 39.3863 0.393765 39.0056 0.230988C38.6249 0.068211 38.2134 -0.0102325 37.7994 0.00106869H6.2999C4.63059 0.00604291 3.03109 0.669875 1.8507 1.84758C0.670324 3.02529 0.00498551 4.62118 0 6.28671V81.7144C0 83.3814 0.663737 84.9802 1.8452 86.159C3.02666 87.3378 4.62906 88 6.2999 88H56.6991V81.7144H6.2999V6.28671H31.4995V25.1436C31.5045 26.8091 32.1698 28.405 33.3502 29.5827C34.5306 30.7605 36.1301 31.4243 37.7994 31.4293H56.6991V37.7149H62.999ZM37.7994 25.1436V7.54383L55.4391 25.1436H37.7994Z" fill="#130013"/>
+                </svg>
+                <p><span>file name</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.0625 10.3135L12 14.2499L15.9375 10.3135" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3.75V14.2472" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.25 14.25V19.5C20.25 19.6989 20.171 19.8897 20.0303 20.0303C19.8897 20.171 19.6989 20.25 19.5 20.25H4.5C4.30109 20.25 4.11032 20.171 3.96967 20.0303C3.82902 19.8897 3.75 19.6989 3.75 19.5V14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></p>
                 </div>
-                <div class="data-list pt-1">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Chukwujekwu Okoh</p>
+            </div>
+                <div class="folder-one">
+                    <div class="folder-svg">   
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M156.25 87.5V156.944C156.25 158.418 155.665 159.831 154.623 160.873C153.581 161.915 152.168 162.5 150.694 162.5H31.25C29.5924 162.5 28.0027 161.842 26.8306 160.669C25.6585 159.497 25 157.908 25 156.25V68.75C25 67.0924 25.6585 65.5027 26.8306 64.3306C28.0027 63.1585 29.5924 62.5 31.25 62.5H66.6667C68.019 62.5 69.3348 62.9386 70.4167 63.75L92.0833 80C93.1652 80.8114 94.481 81.25 95.8333 81.25H150C151.658 81.25 153.247 81.9085 154.419 83.0806C155.592 84.2527 156.25 85.8424 156.25 87.5Z" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 62.5V43.75C50 42.0924 50.6585 40.5027 51.8306 39.3306C53.0027 38.1585 54.5924 37.5 56.25 37.5H91.6667C93.019 37.5 94.3348 37.9386 95.4167 38.75L117.083 55C118.165 55.8114 119.481 56.25 120.833 56.25H175C176.658 56.25 178.247 56.9085 179.419 58.0806C180.592 59.2527 181.25 60.8424 181.25 62.5V131.944C181.25 132.674 181.106 133.396 180.827 134.07C180.548 134.744 180.139 135.357 179.623 135.873C179.107 136.389 178.494 136.798 177.82 137.077C177.146 137.356 176.424 137.5 175.694 137.5H156.25" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+                        <p>Folder 1</p>
+    
                     </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
-                    </div>
+                    
                 </div>
-                <div class="data-list pt-4">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
-                    </div>
-                    <div class="date">
-                        24/01/2024
-                    </div>
-                    <div class="enrolled-courses">
-                        MCT 202
-                    </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
+                <div class="folder-one">
+                    <div class="folder-svg">   
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M156.25 87.5V156.944C156.25 158.418 155.665 159.831 154.623 160.873C153.581 161.915 152.168 162.5 150.694 162.5H31.25C29.5924 162.5 28.0027 161.842 26.8306 160.669C25.6585 159.497 25 157.908 25 156.25V68.75C25 67.0924 25.6585 65.5027 26.8306 64.3306C28.0027 63.1585 29.5924 62.5 31.25 62.5H66.6667C68.019 62.5 69.3348 62.9386 70.4167 63.75L92.0833 80C93.1652 80.8114 94.481 81.25 95.8333 81.25H150C151.658 81.25 153.247 81.9085 154.419 83.0806C155.592 84.2527 156.25 85.8424 156.25 87.5Z" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 62.5V43.75C50 42.0924 50.6585 40.5027 51.8306 39.3306C53.0027 38.1585 54.5924 37.5 56.25 37.5H91.6667C93.019 37.5 94.3348 37.9386 95.4167 38.75L117.083 55C118.165 55.8114 119.481 56.25 120.833 56.25H175C176.658 56.25 178.247 56.9085 179.419 58.0806C180.592 59.2527 181.25 60.8424 181.25 62.5V131.944C181.25 132.674 181.106 133.396 180.827 134.07C180.548 134.744 180.139 135.357 179.623 135.873C179.107 136.389 178.494 136.798 177.82 137.077C177.146 137.356 176.424 137.5 175.694 137.5H156.25" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+                        <p>Folder 2</p>
                     </div>
                 </div>
-                <div class="data-list pt-5">
-                    <div class="user-details">
-                        <img src="img/Ellipse 301.png" alt="">
-                        <p>Uchechukwu Kindness B.</p>
+                <div class="folder-one">
+                    <div class="folder-svg">   
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M156.25 87.5V156.944C156.25 158.418 155.665 159.831 154.623 160.873C153.581 161.915 152.168 162.5 150.694 162.5H31.25C29.5924 162.5 28.0027 161.842 26.8306 160.669C25.6585 159.497 25 157.908 25 156.25V68.75C25 67.0924 25.6585 65.5027 26.8306 64.3306C28.0027 63.1585 29.5924 62.5 31.25 62.5H66.6667C68.019 62.5 69.3348 62.9386 70.4167 63.75L92.0833 80C93.1652 80.8114 94.481 81.25 95.8333 81.25H150C151.658 81.25 153.247 81.9085 154.419 83.0806C155.592 84.2527 156.25 85.8424 156.25 87.5Z" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 62.5V43.75C50 42.0924 50.6585 40.5027 51.8306 39.3306C53.0027 38.1585 54.5924 37.5 56.25 37.5H91.6667C93.019 37.5 94.3348 37.9386 95.4167 38.75L117.083 55C118.165 55.8114 119.481 56.25 120.833 56.25H175C176.658 56.25 178.247 56.9085 179.419 58.0806C180.592 59.2527 181.25 60.8424 181.25 62.5V131.944C181.25 132.674 181.106 133.396 180.827 134.07C180.548 134.744 180.139 135.357 179.623 135.873C179.107 136.389 178.494 136.798 177.82 137.077C177.146 137.356 176.424 137.5 175.694 137.5H156.25" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+                        <p>Folder 3</p>
+    
                     </div>
-                    <div class="date">
-                        24/01/2024
+                </div>
+                <div class="folder-one">
+                    <div class="folder-svg">   
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M156.25 87.5V156.944C156.25 158.418 155.665 159.831 154.623 160.873C153.581 161.915 152.168 162.5 150.694 162.5H31.25C29.5924 162.5 28.0027 161.842 26.8306 160.669C25.6585 159.497 25 157.908 25 156.25V68.75C25 67.0924 25.6585 65.5027 26.8306 64.3306C28.0027 63.1585 29.5924 62.5 31.25 62.5H66.6667C68.019 62.5 69.3348 62.9386 70.4167 63.75L92.0833 80C93.1652 80.8114 94.481 81.25 95.8333 81.25H150C151.658 81.25 153.247 81.9085 154.419 83.0806C155.592 84.2527 156.25 85.8424 156.25 87.5Z" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 62.5V43.75C50 42.0924 50.6585 40.5027 51.8306 39.3306C53.0027 38.1585 54.5924 37.5 56.25 37.5H91.6667C93.019 37.5 94.3348 37.9386 95.4167 38.75L117.083 55C118.165 55.8114 119.481 56.25 120.833 56.25H175C176.658 56.25 178.247 56.9085 179.419 58.0806C180.592 59.2527 181.25 60.8424 181.25 62.5V131.944C181.25 132.674 181.106 133.396 180.827 134.07C180.548 134.744 180.139 135.357 179.623 135.873C179.107 136.389 178.494 136.798 177.82 137.077C177.146 137.356 176.424 137.5 175.694 137.5H156.25" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+                        <p>Folder 1</p>
                     </div>
-                    <div class="enrolled-courses">
-                        MCT 202
+                </div>
+                <div class="folder-one">
+                    <div class="folder-svg">   
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M156.25 87.5V156.944C156.25 158.418 155.665 159.831 154.623 160.873C153.581 161.915 152.168 162.5 150.694 162.5H31.25C29.5924 162.5 28.0027 161.842 26.8306 160.669C25.6585 159.497 25 157.908 25 156.25V68.75C25 67.0924 25.6585 65.5027 26.8306 64.3306C28.0027 63.1585 29.5924 62.5 31.25 62.5H66.6667C68.019 62.5 69.3348 62.9386 70.4167 63.75L92.0833 80C93.1652 80.8114 94.481 81.25 95.8333 81.25H150C151.658 81.25 153.247 81.9085 154.419 83.0806C155.592 84.2527 156.25 85.8424 156.25 87.5Z" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 62.5V43.75C50 42.0924 50.6585 40.5027 51.8306 39.3306C53.0027 38.1585 54.5924 37.5 56.25 37.5H91.6667C93.019 37.5 94.3348 37.9386 95.4167 38.75L117.083 55C118.165 55.8114 119.481 56.25 120.833 56.25H175C176.658 56.25 178.247 56.9085 179.419 58.0806C180.592 59.2527 181.25 60.8424 181.25 62.5V131.944C181.25 132.674 181.106 133.396 180.827 134.07C180.548 134.744 180.139 135.357 179.623 135.873C179.107 136.389 178.494 136.798 177.82 137.077C177.146 137.356 176.424 137.5 175.694 137.5H156.25" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+                        <p>Folder 2</p>
                     </div>
-                    <div class="current-status">
-                        <a class="btn-pending" href="pending.html">Pending</a>
+                </div>
+                <div class="folder-one">
+                    <div class="folder-svg">   
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M156.25 87.5V156.944C156.25 158.418 155.665 159.831 154.623 160.873C153.581 161.915 152.168 162.5 150.694 162.5H31.25C29.5924 162.5 28.0027 161.842 26.8306 160.669C25.6585 159.497 25 157.908 25 156.25V68.75C25 67.0924 25.6585 65.5027 26.8306 64.3306C28.0027 63.1585 29.5924 62.5 31.25 62.5H66.6667C68.019 62.5 69.3348 62.9386 70.4167 63.75L92.0833 80C93.1652 80.8114 94.481 81.25 95.8333 81.25H150C151.658 81.25 153.247 81.9085 154.419 83.0806C155.592 84.2527 156.25 85.8424 156.25 87.5Z" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 62.5V43.75C50 42.0924 50.6585 40.5027 51.8306 39.3306C53.0027 38.1585 54.5924 37.5 56.25 37.5H91.6667C93.019 37.5 94.3348 37.9386 95.4167 38.75L117.083 55C118.165 55.8114 119.481 56.25 120.833 56.25H175C176.658 56.25 178.247 56.9085 179.419 58.0806C180.592 59.2527 181.25 60.8424 181.25 62.5V131.944C181.25 132.674 181.106 133.396 180.827 134.07C180.548 134.744 180.139 135.357 179.623 135.873C179.107 136.389 178.494 136.798 177.82 137.077C177.146 137.356 176.424 137.5 175.694 137.5H156.25" stroke="#333333" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+                        <p>Folder 3</p>
+                    </div>
+                </div>
+            </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Choose theme</h3>
+                <div class="theme">
+                    <div class="light">
+                        <input type="radio" name="theme" id="light" onchange="changeTheme('light')">
+                        <label for="light">Light</label>
+                    </div>
+                    <div class="dark">
+                        <input type="radio" name="theme" id="dark" onchange="changeTheme('dark')">
+                        <label for="dark">Dark</label>
+                    </div>
+                    <div class="default">
+                        <input type="radio" name="theme" id="default" checked>
+                        <label for="default">Default</label>
+                    </div>
+                </div>
+                <div class="font">
+                    <div class="small">
+                        <input type="radio" name="font" id="small">
+                        <label for="small">small</label>
+                    </div>
+                    <div class="medium">
+                        <input type="radio" name="font" id="medium">
+                        <label for="medium">Medium</label>
+                    </div>
+                    <div class="large">
+                        <input type="radio" name="font" id="large" checked>
+                        <label for="large">Large</label>
                     </div>
                 </div>
             </div>
@@ -227,21 +274,60 @@
     </section>
 </div>
 <script src="js/style.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 <script>
-    
-document.addEventListener("DOMContentLoaded", function () {
-    var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
-    
-    radioButtons.forEach(function (radioButton) {
-        radioButton.addEventListener('click', function () {
-            radioButtons.forEach(function (rb) {
-                if (rb !== radioButton) {
-                    rb.checked = false;
+    // Initialize CKEditor
+    ClassicEditor
+        // .create(document.querySelector('#message'))
+        .create(document.querySelector('#message'), {
+            editor: {
+                ui: {
+                    view: {
+                        height: '500px' // Set the height here
+                    }
                 }
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll('.course-radio input[type="radio"]');
+        
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener('click', function () {
+                radioButtons.forEach(function (rb) {
+                    if (rb !== radioButton) {
+                        rb.checked = false;
+                    }
+                });
             });
         });
     });
-});
-</script>
+    var modal = document.getElementById("myModal");
+    var modalToggle = document.getElementById("modalToggle");
+    var span = document.getElementsByClassName("close")[0];
+
+    modalToggle.addEventListener("click", function() {
+        if (modalToggle.checked) {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    });
+
+    span.onclick = function() {
+        modalToggle.checked = false;
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalToggle.checked = false;
+        }
+    };
+
+    </script>
 </body>
 </html>
